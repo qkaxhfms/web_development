@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Prefix</title>
+</head>
+<body>
+    <h1>Vendor Prefix</h1>
+    <p>CSS3 표준으로 확정되기 이전 또는 브라우저 개발사가 실험적으로 제공하는 기능을 사용하기 위해서는 벤더 프리픽스(Vendor Prefix)를 사용하여야 한다.</p>
+    * {
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;          /* Likely future */
+      }
+    <table>
+        <caption>벤더 프리픽스 설명에 관한 표</caption>
+        <colgroup>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Browser</th>
+                <th>Vendor Prefix</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>IE or Edge</td>
+                <td>-ms-</td>
+            </tr>
+            <tr>
+                <td>Chrome</td>
+                <td>-webkit-</td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td>-moz-</td>
+            </tr>
+            <tr>
+                <td>Safari</td>
+                <td>-webkit-</td>
+            </tr>
+            <tr>
+                <td>Opera</td>
+                <td>-o-</td>
+            </tr>
+            <tr>
+                <td>iOS Safari</td>
+                <td>-webkit-</td>
+            </tr>
+            <tr>
+                <td>Android Browser</td>
+                <td>-webkit-</td>
+            </tr>
+            <tr>
+                <td>Chrome for Android</td>
+                <td>-webkit-</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
