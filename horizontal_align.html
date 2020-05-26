@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Align</title>
+    <style>
+
+        /*container*/
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      background: url(https://subtlepatterns.com/patterns/white_texture.png);
+      font: 100 14px sans-serif;
+      color: #444555;
+      background-color: #ddd;
+    }
+
+    h1 {
+      font-weight: 100;
+      font-size: 2.7em;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h3 {
+      font-weight: 100;
+      font-size: 1.8em;
+      text-align: center;
+      margin: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      background: #333;
+      border-radius: 5px;
+      color: white;
+      padding: 3px 8px;
+    }
+
+    .wrapper {
+      margin: 10px;
+      padding: 10px;
+      height: 230px;
+      background-color: #fff;
+      /*This prevents the margins to collapse.*/
+      overflow:hidden;
+    }
+
+    .center {
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    .center.inline {
+      text-align: center;
+    }
+
+    .center.block {
+      width: 200px;
+      margin: 20px auto;
+      background: #333;
+      border-radius: 5px;
+      color: white;
+      padding: 3px 8px;
+    }
+
+    .center.flex-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    .center.inline div,
+    .center.flex-center div {
+      width: 150px;
+      margin: 10px;
+      display: inline-block;
+      background: #333;
+      border-radius: 5px;
+      color: white;
+      text-align: left;
+      padding: 3px 8px;
+    }
+
+    </style>
+</head>
+<body> 
+
+    <h1>Centering with CSS(Vertical & Horizontal)</h1>
+    <h3>Horizontal Align - inline/inline-block 요소</h3>
+
+    <div class="wrapper">
+        <div class="center inline">
+        Lorem ipsum dolor sit amet
+        </div>
+        <div class="center inline">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <h3>Horizontal Align - block 요소</h3>
+
+    <div class="wrapper">
+        <div class="center block">Lorem ipsum dolor sit amet</div>
+    </div>
+
+    <h3>Horizontal Align - 복수의 block 요소</h3>
+
+    <div class="wrapper">
+        inline-block
+        <div class="center inline">
+        <div>Lorem ipsum dolor sit amet</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+        <div>Lorem ipsum dolor sit amet</div>
+        </div>
+    </div>
+    <div class="wrapper">
+        flexbox
+        <div class="center flex-center">
+        <div>Lorem ipsum dolor sit amet</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+        <div>Lorem ipsum dolor sit amet</div>
+        </div>
+    </div>
+</body>
+</html>
