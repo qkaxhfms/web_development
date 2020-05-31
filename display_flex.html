@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .flex-container{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            background:#ccc;height:300px;
+            flex-direction:row; /*기본값*/
+            flex-direction:row-reverse;/*역방향*/
+            flex-direction:column;/*위에서 아래로 수직*/
+            flex-direction:column-reverse;/*아래에서 위로 수직*/
+        }
+        .flex-inner{
+            width:120px;
+            height:40px;
+            line-height:40px;
+            background:#333;
+            color:#fff;
+            text-align: center;
+            margin:10px;
+        }
+    </style>
 </head>
 <body>
     <h1>FlexBox</h1>
@@ -20,6 +41,13 @@
         <br>브라우저의 지원 상황은 caniuse를 참조하기 바란다.
         <br>Flexbox 레이아웃은 flex item이라 불리는 복수의 자식 요소와 이들을 내포하는 flex-container 부모 요소로 구성된다.
         <br>flexbox를 사용하기 위해서 HTML 부모 요소의 display 속성에 flex를 지정한다.
+    </div>
+    <div class="flex-container">
+        <div class="flex-inner">1</div>
+        <div class="flex-inner">2</div>
+        <div class="flex-inner">3</div>
+        <div class="flex-inner">4</div>
+        <div class="flex-inner">5</div>
     </div>
 </body>
 </html>
