@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>white wrap</title>
+    <style>
+        /*말줄임*/
+        .container{width:600px;margin:60px auto;}
+        .text-box{background:#ccc;margin:20px 0;}
+        .white-wrap-single{
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            word-wrap:normal;
+            overflow:hidden;
+            width:90%;
+        }
+        .white-wrap-multiple{
+            overflow:hidden;
+            text-overflow:ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* 라인수 */
+            -webkit-box-orient: vertical;
+            word-wrap:break-word;
+            line-height:1.2em;
+            height:3.6em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- text-box -->
+        <h2>Normal</h2>
+        <div class="text-box">
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+        </div>
+        <!--// text-box -->
+        <!-- text-box -->
+        <h2>Single</h2>
+        <div class="text-box white-wrap-single">
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+        </div>
+        <!--// text-box -->
+        <!-- text-box -->
+        <h2>Multiple</h2>
+        <div class="text-box white-wrap-multiple">
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+            하나둘셋넷다섯여섯일곱여덟아홉열
+        </div>
+        <!--// text-box -->
+    </div>
+</body>
+</html>
