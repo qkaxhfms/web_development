@@ -10,11 +10,49 @@
         .text-box{background:#ccc;margin:20px 0;}
         .white-wrap-single{
             text-overflow:ellipsis;
+            /*
+            text-overflow
+            글자가 지정한 너비를 넘어갈 경우 어떤 식으로 처리할지를 선택하는 속성
+            clip : 기본값
+            ellipsis:말줄임표처리
+            inherit:상속
+            */
             white-space:nowrap;
+            /*
+            white-space
+            요소안에서 공백은 어떤식으로 처리할지를 선택하는 속성
+            공백은 줄바꿈,들여쓰기,공백 입니다
+            white-space:noraml 기본값
+            white-space:nowrap 1줄로
+            white-space:pre 공백에 있는 그대로 표시 코드에 줄바꿈이 없으면 줄바꿈을 실행하지 않는다
+            whtie-space:pre-wrap 공백을 코드에 있는 그대료 표시, 코드에 줄바꿈이 없어도 자동으로 줄바꿈 실행
+            white-space:pre-line 공백을 넣어도 1개로 처리, 코드에 줄바꿈이 없어도 자동으로 줄바꿈 실행
+            */
             word-wrap:normal;
+            /*
+            word-wrap
+            word-wrap:normal 기본값 글자가 길어도 끊어지지 않고 한줄에 계속 표시
+            word-wrap:break-word:강제로 끊어서 줄바꿈
+            */
             overflow:hidden;
             width:90%;
         }
+        /*
+        text-overflow:ellipsis;
+        white-space:nowrapl
+        word-wrap:normal;
+        overflow:hidden;
+        width:90%;
+        */
+
+        /*
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        word-wrap:normal;
+        width:90%;
+        overflow:hidden;
+        */
+
         .white-wrap-multiple{
             overflow:hidden;
             text-overflow:ellipsis;
