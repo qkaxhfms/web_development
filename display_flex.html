@@ -6,23 +6,68 @@
     <title>Document</title>
     <style>
         .flex-container{
+            width:600px;
+            margin:0 auto;
             display:flex;
-            align-items:center;
-            justify-content: center;
-            background:#ccc;height:300px;
-            flex-direction:row; /*기본값*/
-            flex-direction:row-reverse;/*역방향*/
-            flex-direction:column;/*위에서 아래로 수직*/
-            flex-direction:column-reverse;/*아래에서 위로 수직*/
+            /*align-items:center;*/
+
+            /*justify-content:flex-start;*//*기본값*/ /*시작점 시작*/
+            /*justify-content: center; 중앙정렬*/
+            /*justify-content:flex-end;끝점 시작 */
+            /*justify-content:space-between;*/ /*좌 우 배치하고 나머지는 균등한 간격으로 정렬*/
+            /*justify-content:space-around;*//*모든 flex-item을 균등하게 정렬한다*/
+            background:#ccc;
+            height:300px;
+            /*flex-direction:row;*/ /*기본값*/
+            /*flex-direction:row-reverse;*/ /*역방향*/
+            /*flex-direction:column;*/ /*위에서 아래로 수직*/
+            /*flex-direction:column-reverse;*/ /*아래에서 위로 수직*/
+            /*flex-wrap:wrap;*/ /* flex-item들의 width합계가 큰 경우, flex-item을 복수행에 배치한다. */
+            /*flex-wrap:wrap-reverse;*/ /*릳ㅌ-item을 아래에서 위로 배치*/
+
+            /*축약형*/
+            /*flex-flow:flex-direction flex-wrap;*/
+            /*flex-flow:row-reverse wrap-reverse;*/
+
+            /*align-items:stretch;*//*기본값 꽉참*/
+            /*align-items:flex-start;*//*cross start기준으로 정렬*/
+            /*align-items:flex-end;*//*cross end 기준으로 정렬*/
+            /*align-items:center;*/ /*center기준으로 정렬*/
+            /*align-items:baseline;*/ /*baseline기준으로정렬*/
+
+            /*align-content:stretch;*/
+            /*align-content:flex-start;*/
+            /*align-content:flex-end;*/
+            /*align-content:center;*/ /*cross-axis 중앙에 stack 정렬된다*/
+            /*align-content:space-between;*/ /*균등하게 붙기, 위아래붙기*/
+            /*align-content:space-around;*/ /*균등하게 붙기, 위아래뜨기*/
         }
-        .flex-inner{
-            width:120px;
+        .flex-item{
             height:40px;
             line-height:40px;
             background:#333;
             color:#fff;
             text-align: center;
-            margin:10px;
+            margin:2px;
+            /*flex:none;*/ /*flex-grow*/ /*flex-shrink*/ /*shrink-basis*/
+            /*align-self:auto; item 들의 수직 정렬
+            align-self:flex-start;
+            align-self:flex-end;
+            align-self:center;
+            align-self:baseline;
+            align-self:stretch;*/
+
+        }
+        .con1,.con2,.con3,.con4,.con5,.con6{
+            /*flex-grow:1;*/
+            /*flex-basis:auto;*//*기본값*/
+        }
+        .con5{
+            /*flex-grow:2;*//*넓이에 관한 값*/
+            /*flex-shrink:0;*/ /*넓이 축소에 관한 값*/
+            /*order :0;*//*순서에 관한 값*/
+            /*flex-basis:350px; 넓이 수치에 관한 값*/
+            /*flex-basis:33%; 넓이 수치에 관한 값*/
         }
     </style>
 </head>
@@ -43,11 +88,12 @@
         <br>flexbox를 사용하기 위해서 HTML 부모 요소의 display 속성에 flex를 지정한다.
     </div>
     <div class="flex-container">
-        <div class="flex-inner">1</div>
-        <div class="flex-inner">2</div>
-        <div class="flex-inner">3</div>
-        <div class="flex-inner">4</div>
-        <div class="flex-inner">5</div>
+        <div class="flex-item con1">cell-1</div>
+        <div class="flex-item con2">cell-2</div>
+        <div class="flex-item con3">cell-3</div>
+        <div class="flex-item con4">cell-4</div>
+        <div class="flex-item con5">cell-5</div>
+        <div class="flex-item con6">cell-6</div>
     </div>
 </body>
 </html>
