@@ -6,19 +6,53 @@
     <title>Float relase</title>
     <style>
         .container{background:#333;}
-        .container::after{display:block;content:'';clear:both;}
-        .container>div{float:left;width:120px;height:120px;border:1px solid #333;box-sizing:border-box;}
-        .container>div:nth-child(1){background:#ddd;}
-        .container>div:nth-child(2){background:#eee;}
-        .container>div:nth-child(3){background:#fff;}
+        .container>div{margin:20px 0;}
+        /*type1
+        - after clearfix
+        */
+        .type1::after{display:block;content:'';clear:both;}
+        .type1>div{float:left;width:120px;height:120px;border:1px solid #333;box-sizing:border-box;}
+        .type1>div:nth-child(1){background:#ddd;}
+        .type1>div:nth-child(2){background:#eee;}
+        .type1>div:nth-child(3){background:#fff;}
+        /*type2
+        - micro clearfix
+        */
+        .type2::before,
+        .type2::after{content:'';display:table;}
+        .type2::after{clear:both;}
+        .type2>div{float:left;width:120px;height:120px;border:1px solid #333;box-sizing:border-box;}
+        .type2>div:nth-child(1){background:#3dd;}
+        .type2>div:nth-child(2){background:#3ee;}
+        .type2>div:nth-child(3){background:#3ff;}
+        /*type3
+        - display:flow-root
+        */
+        .type3{display:flow-root;}
+        .type3>div{float:left;width:120px;height:120px;border:1px solid #333;box-sizing:border-box;}
+        .type3>div:nth-child(1){background:#d3d;}
+        .type3>div:nth-child(2){background:#e3e;}
+        .type3>div:nth-child(3){background:#e3f;}
     </style>
 </head>
 <body>
     <h1>Float Relase</h1>
     <div class="container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <div class="type1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="type2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="type3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
     </div>
 </body>
 </html>
