@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Each</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Each</h1>
+    <p>객체와 배열을 완벽하게 반복하는데 사용</p>
+    <script>
+
+        $.each([5,97],function(index,value){
+            console.log(index + ": " + value);
+        });
+        /*
+        결곽값
+
+        0: 5
+        1: 97
+        */
+
+
+        var obj = {
+            "flammable" : "inflammable",
+            "duh" : "no duh"
+        };
+
+        $.each(obj, function(key, value){
+            console.log(key + ': ' + value);
+        })
+        /*
+        결곽값
+
+        flammable: inflammable
+        duh: no duh
+        */
+
+        $.each(["a","b","c"],function(i,l){
+            console.log(i);
+            console.log(l);
+        })
+
+
+    </script>
+</body>
+</html>
