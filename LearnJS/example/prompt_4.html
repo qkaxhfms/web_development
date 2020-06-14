@@ -11,6 +11,17 @@
         var number = Math.floor(Math.random()*6);
         var answer = parseInt(window.prompt('숫자 맛지히 게임, 0~5의 숫자를 입력하세요.'));
         var message;
+        /*
+        Math.ceil(); 소수점 올림, 정수형 반환
+        Math.floor(); 소수점 버림, 정수형 반환
+        Math.round(); 소수점 반올림, 정수형 반환
+        */
+
+        /*
+        parseInt : 문자열을 숫자로 변환
+        */
+
+
         if(answer === number){
             message = '정답!';
         }else if(answer < number){
@@ -21,6 +32,15 @@
             message = '0 ~5 사이의 숫자를 입력해 주세요';
         }
         window.alert(message);
+
+        /*
+        Math.ceil(); 소수점 올림, 정수형 반환
+        Math.floor(); 소수점 버림, 정수형 반환
+        Math.round(); 소수점 반올림, 정수형 반환
+        */
+
+
+
         /*
         a === b a와 b가 같으면 true
         a != b a와 b가 다르면 true
