@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리 연산자</title>
+</head>
+<body>
+    <h1>논리 연산자</h1>
+    <p>두 개 이상의 조건식을 이용해서 하나의 조건 만들기</p>
+    <script>
+        var hour = new Date().getHours();
+        if(hour >= 19 && hour <21){
+            window.alert('도시락 30% 할인');
+        }else if(hour === 9 || hour === 15){
+            window.alert('도시락 하나 사면 하나 공짜!');
+        }else{
+            window.alert('도시락 사세요');
+        }
+        /*
+        a && b a와 b 결과가 모두 true 여야 true
+        a || b a와 ㅣb 중 하나라도 true면 true
+        !a a가 false면 결과가 true
+        */
+    </script>
+</body>
+</html>
