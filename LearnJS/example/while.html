@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body>
+    <h1>While</h1>
+    <script>
+        window.alert('대전 시작!');
+        while(enemy > 0){
+            attack = Math.floor(Math.random()*30) + 1;
+            console.log('몬스터에게' + attack + '의 피해를 입혔다!');
+            enemy = enemy - attack;
+        }
+        console.log('몬스터를 물리쳤다!');
+    </script>
+</body>
+</html>
