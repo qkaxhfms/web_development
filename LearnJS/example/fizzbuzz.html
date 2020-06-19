@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <h1>FizzBuzz</h1>
+    <p>사칙연산자</p>
+    <script>
+        var fizzbuzz = function(num){
+            if(num % 3 === 0 && num % 5 === 0 ){
+                return 'FizzBuzz!';
+            }else if(num % 3 === 0 ){
+                return 'Fizz!';
+            }else if(num %5 === 0){
+                return 'Buzz!';
+            }else{
+                return num;
+            }
+        }
+        console.log(fizzbuzz(0));
+        console.log(fizzbuzz(1));
+        console.log(fizzbuzz(3));
+        console.log(fizzbuzz(5));
+        console.log(fizzbuzz(15));
+        /*
+        a+b -> a+b
+        a-b -> a-b
+        a*b -> axb
+        a/b -> a%b
+        a%b -> a%b의 나머지
+        a-- 혹은 --a -> a-1
+        a+=b -> a+b한 후 a에 대입
+        a-=b -> a-b한 후 a에 대입
+        a*=b -> axb한 후 a에 대입
+        a/=b -> a%b한 후 a에 대입
+        a%=b -> a%b의 나머지를 a에 대입
+        */
+    </script>
+</body>
+</html>

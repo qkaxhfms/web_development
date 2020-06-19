@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <style>
+        span{display:block;margin:4px 0;}
+    </style>
+</head>
+<body>
+    <h1>Function</h1>
+    <p>how to make function easily</p>
+    <span id="output1"></span>
+    <span id="output2"></span>
+    <span id="output3"></span>
+    <script>
+        var total = function(price){
+            var tax = 0.08;
+            return price + price * tax;
+        }
+        console.log('커피 기계의 가격은' + total(8000) + '원 (부가세 포함)입니다.');
+        document.getElementById('output1').textContent = '커피기계의 가격은' + total(8000) + '원(부가세 포함) 입니다.'
+        document.getElementById('output2').textContent = '커피기계의 가격은' + total(200) + '원(부가세 포함) 입니다.'
+        document.getElementById('output3').textContent = '커피기계의 가격은' + total(10000) + '원(부가세 포함) 입니다.'
+        /*
+        var 함수명 = function(필요한 매개변수){
+            구체적인 처리내용
+        }        
+        */
+
+
+    </script>
+</body>
+</html>
