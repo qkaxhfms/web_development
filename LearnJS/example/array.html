@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <p>배열을 알아보자</p>
+    <p>배열 : 데이터용 가방 / 여러 데이터를 모아서 관리할때 사용</p>
+    <script>
+        var todo = ['디자인 샘플 작성', '데이터 정리', '자소서 쓰기', 'JS 정리하기']
+        todo.push('인사 하기')// push로 뒤에 넣기
+        todo.unshift('씻기');
+        console.log(todo[1]);
+        console.log(todo[5]);// 없다는 뜻
+        //console.log(todo[인덱스번호]);
+        for(i=0; i < todo.length; i++){
+            console.log(todo[i]);
+        }
+
+        // .pop() 배열의 마지막 데이터 삭제
+        // .push() 배열의 마지막 부분에 데이터 추가
+        // .shift() 배열의 첫번째 데이터 삭제
+        // .unshilft(데이터1,데이터2) 베열의 앞 부분에 데이터1,데이터2를 추가한다
+
+    </script>
+</body>
+</html>
