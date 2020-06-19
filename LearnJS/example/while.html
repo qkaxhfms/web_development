@@ -8,7 +8,7 @@
 <body>
     <h1>While</h1>
     <script>
-        window.alert('대전 시작!');
+        console.log('대전 시작!');
         while(enemy > 0){
             attack = Math.floor(Math.random()*30) + 1;
             console.log('몬스터에게' + attack + '의 피해를 입혔다!');
@@ -21,7 +21,25 @@
         while(조건문){
             //여기가 반복 실행된다.
         }
+        100 - 10 = 90
+        90 - 25 = 65
+        65 - 15 = 50
+        50 - 20 = 30
+        30 - 30 = 0
         */
+
+        var enemy = 100;
+        var attack;
+        var count = 0;
+
+        console.log('대전 시작!');
+        while(enemy > 0){
+            attack = Math.flooar(Math.random()*30);
+            console.log('몬스터에게' + atack + '의 피해를 입혔다!');
+            enemy -=attack;
+            count ++;
+        }
+        console.log(count + '회 만에 몬스터를 물리쳤따!');
     </script>
 </body>
 </html>
