@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <p>배열을 알아보자</p>
+    <p>배열 : 데이터용 가방 / 여러 데이터를 모아서 관리할때 사용</p>
+    <section>
+        <ul id="list">
+            <!-- 내용 삽입 -->
+        </ul>
+    </section>
+    <script>
+        var todo = ['디자인 샘플 작성', '데이터 정리', '자소서 쓰기', 'JS 정리하기']
+
+        for(var i=0; i<todo.length; i++){
+            console.log(todo[i]);
+
+            var li = document.createElement('li'); // 태그를 생성하는 역할을 지닌 메서드
+            li.textContent = todo[i];
+            document.getElementById('list').appendChild(li);
+            // document.createElement(태그명) <-- 태그를 생성하는 역할
+            // 가져온요소.appendChild(삽입하고 싶은 자식 요소)
+        }
+    </script>
+
+</body>
+</html>
