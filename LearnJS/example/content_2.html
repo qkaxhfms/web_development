@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <style>
+        table{}
+        table tr,
+        table td{border:1px solid #333;}
+    </style>
+</head>
+<body>
+    <h1>객체 2</h1>
+    <table>
+        <tr>
+            <td id="title"></td>
+            <td id="price"></td>
+            <td id="stock"></td>
+        </tr>
+    </table>
+    <script>
+        var jsbook = {
+            title:'자바스크립트 입문',
+            price:2000,
+            stock:3,
+            sample:4
+        }
+        for (var p in jsbook){
+            console.log(p + '=' + jsbook[p]);
+        }
+        /*
+        for (var 프로퍼티를 저장해 두는 변수명 in 객체명){
+            처리내용
+        }
+        */
+        document.getElementById('title').textContent = jsbook.title;
+        document.getElementById('price').textContent = jsbook.price + '원';
+        document.getElementById('stock').textContent = jsbook.stock;
+    </script>
+</body>
+</html>
