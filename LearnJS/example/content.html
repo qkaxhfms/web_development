@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>객체</h1>
+    <p>객체의 개념 잡기</p>
+    <script>
+        var jsbook = {
+            title: '자바스크립트 입문',
+            price: 2500,
+            stock: 3
+        }
+        console.log(jsbook);
+        console.log(jsbook.title); //이렇게도 일고
+        console.log(jsbook['price']); //이렇게도 읽음
+        console.log(jsbook.stock);
+        jsbook.stock = 10;
+        console.log(jsbook.stock);
+        jsbook['stock'] = 100;
+        console.log(jsbook.stock);
+    </script>
+</body>
+</html>
