@@ -19,6 +19,11 @@
         내용을쓰고 제출을 누르면 my_name="철수" 이렇게 보내짐
 
         */
+        /*
+        취득한요소.onsubmit = function(){
+            처리내용
+        };
+        */
         document.getElementById('form').onsubmit = function(){
             // console.log('클릭했습니다.');
             var search = document.getElementById('form').word.value;
@@ -26,8 +31,8 @@
             return false;
         };
         /*
-        취득한요소.onsubmit = function(){
-            처리내용
+        취득한요소 <form> 요소 중 읽고 싶은 양식의 name 속성.value
+
         };
         */
     </script>
