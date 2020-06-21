@@ -8,12 +8,28 @@
 <body>
     <h1>입력과 가공</h1>
     <form action="#" id="form">
+        <input type="text" name="word">
         <input type="submit" value="검색">
     </form>
+    <p id="output"></p>
     <script>
+        /*
+        <input type="text" name="word">
+        <input type="submit" value="검색">
+        내용을쓰고 제출을 누르면 my_name="철수" 이렇게 보내짐
+
+        */
         document.getElementById('form').onsubmit = function(){
-            console.log('클릭했습니다.');
-        }
+            // console.log('클릭했습니다.');
+            var search = document.getElementById('form').word.value;
+            document.getElementById('output').textContent = '[' + search + '] 검색 중...';
+            return false;
+        };
+        /*
+        취득한요소.onsubmit = function(){
+            처리내용
+        };
+        */
     </script>
 </body>
 </html>
