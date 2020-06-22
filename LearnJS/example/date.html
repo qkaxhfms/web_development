@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date객체</title>
+</head>
+<body>
+    <h1>Date 객체</h1>
+    <p>연/월/일과 시간 표시하기</p>
+    <section>
+        <p>최종 접속 일시 : <span id="time"></span></p>
+    </section>
+    <script>
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth();
+        var date = now.getDate();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+
+        var output = year + '/' + (month + 1) + '/' + date + '' + hour + ':' + min;
+        document.getElementById('time').textContent = output;
+
+    </script>
+</body>
+</html>
