@@ -12,7 +12,7 @@
         <p>최종 접속 일시 : <span id="time"></span></p>
     </section>
     <script>
-        var now = new Date();
+        var now = new Date(); //초기화된 객체
         var year = now.getFullYear();
         var month = now.getMonth();
         var date = now.getDate();
@@ -21,6 +21,10 @@
 
         var output = year + '/' + (month + 1) + '/' + date + '' + hour + ':' + min;
         document.getElementById('time').textContent = output;
+        /*
+        여러 객체를 생성할 수 있는 경우는 초기화한다.
+        여러 객체를 생성할 수 없는 경우는 초기화하지 않는다.
+        */
 
     </script>
 </body>
