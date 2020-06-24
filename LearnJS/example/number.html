@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0을 붙여서 자릿수 맞추기</title>
+</head>
+<body>
+    <h1>0을 붙여서 자릿수 맞추기</h1>
+    <script>
+        var addZero = function(num,digit){
+            var numString = String(num);
+            while(numString.length < digit){
+                numString = '0' + numString;
+            }
+            return numString;
+        }
+        console.log(addZero(1,2));
+    </script>
+</body>
+</html>
