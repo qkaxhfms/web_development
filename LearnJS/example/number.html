@@ -9,9 +9,28 @@
     <h1>0을 붙여서 자릿수 맞추기</h1>
     <script>
         var addZero = function(num,digit){
+            //num은 자릿수를 변경할 숫자를 지정
+            //digit는 자릿수를 지정하기 위한 것
+            /*
+            0 + 1 = 1 이 방법은 01이 되지 않는다.
+            '0' + '1' = '01' 이 방법은 01이 된다.
+            */
             var numString = String(num);
+            //string은 매개변수로 지정한 데이터를 문자열 데이터로 변환한다.
             while(numString.length < digit){
+                /*
+                '1' 이면 length는 1
+                '01' 이면 length는 2
+                '001' 이면 length는 3
+                */
                 numString = '0' + numString;
+                /*
+                조건식의 평과 결과가 true라면 {~}안 처리가 실행되므로
+                numSting의 값 앞에 0을 연결하여 '01'을 만들고
+                그것을 다시 numString에 대입한다.
+                numSting이 '01'이 되면 while조건식이 false가 됨으로 반복을 멈춘다.
+                
+                */
             }
             return numString;
         }
