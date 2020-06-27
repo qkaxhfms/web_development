@@ -7,6 +7,12 @@
 </head>
 <body>
     <h1>0을 붙여서 자릿수 맞추기</h1>
+    <section>
+        <h2>Standard Revival MP3</h2>
+        <div id="list">
+            
+        </div>
+    </section>
     <script>
         var addZero = function(num,digit){
             //num은 자릿수를 변경할 숫자를 지정
@@ -35,7 +41,24 @@
             }
             return numString;
         }
-        console.log(addZero(1,2));
+        // console.log(addZero(1,2));
+        var songs = [
+            'SONG A',
+            'SONG B',
+            'SONG C',
+            'SONG D',
+            'SONG E',
+            'SONG F',
+            'SONG G',
+            'SONG H',
+            'SONG I',
+            'SONG J'
+        ];
+        for (var i=0; i<songs.length; i++){
+            var paragraph = document.createElement('p');
+            paragraph.textContent = addZero(i + 1,2) + '.' + songs[i];
+            document.getElementById('list').appendChild(paragraph);
+        }
     </script>
 </body>
 </html>
