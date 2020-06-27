@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소수점 버리기</title>
+</head>
+<body>
+    <h1>소수점 버리기</h1>    
+    <p>원주율은
+        <span>
+            <script>
+                document.write(Math.PI);
+            </script>
+        </span>
+        이다.
+    </p>
+    <p>
+        그냥 버리면
+        <span>
+            <script>
+                document.write(Math.floor(Math.PI));
+            </script>
+        </span>
+        이 된다.
+    </p>
+    <p id="output"></p>
+    <script>
+        var point = function(num,digit){
+            var time = Math.pow(10,digit);
+            /*
+            Math.pow(a,b);
+            a를 b제곱한다.
+            */
+            return Math.floor(num * time) / time;
+        }
+        document.getElementById('output').textContent = point(Math.PI,2);
+    </script>
+</body>
+</html>
