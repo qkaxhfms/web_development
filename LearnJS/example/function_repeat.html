@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function repeat</title>
+    <style>
+        span{display:block;margin:4px 0;}
+    </style>
+</head>
+<body>
+    <h1>Function</h1>
+
+    <script>
+        let total = function(price){
+            let tax = 0.08;
+            return price + price*tax;
+        }
+        console.log('부가세 포함 가격은 총' + total(200) + '부가세 포함입니다.');
+
+    </script>
+</body>
+</html>
