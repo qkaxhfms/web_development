@@ -15,5 +15,27 @@
     할당 단계(Assignment phase)
     undefined로 초기화된 변수에 실제값을 할당한다.
     </div>
+    <button type="button" class="btnClick">클릭</button>
+    <button type="reset" class="btnReset">클릭</button>
+    <p id="output"></p>
+    <script>
+        let btnClick = document.getElementsByClassName("btnClick")[0];
+        let btnReset = document.getElementsByClassName("btnReset")[0];
+        let output = document.getElementById("output");
+        let code = document.getElementsByClassName("code")[0];
+
+        btnClick.addEventListener("click",outputCon);
+        btnReset.addEventListener("click",outputReset);
+
+        // outputCon();
+        function outputCon (){
+            console.log("hello");
+            output.innerHTML = "결과값입니다.";
+        }
+        // outputReset();
+        function outputReset (){
+            output.innerHTML = '';
+        }
+    </script>
 </body>
 </html>
