@@ -11,22 +11,26 @@
         <br> * { font-family: 'Nanum Gothic', sans-serif; }</div>
     <h2>서버 폰트 로딩 방식</h2>
     <div>
-        /* IE 9~ & all browsers */
-        @font-face {
-            font-family: myFontName;
-            src: url("myFont.woff");
-        }
-        * { font-family: myFontName, sans-serif; }
-        
-        @font-face {
-            font-family:"Nanum Gothic";
-            src:url("NanumGothic.eot"); /* IE 9 호환성 보기 모드 대응 */
-            src:local("☺"),             /* local font 사용 방지. 생략 가능 */
-                url("NanumGothic.eot?#iefix") format('embedded-opentype'), /* IE 6~8 */
-                url("NanumGothic.woff") format('woff'); /* 표준 브라우저 */
-          }
-          
-          * { font-family: "Nanum Gothic", sans-serif; }
+        <h2>IE 9~ & all browsers</h2>
+        <!-- code -->
+        <div class="code">
+            @font-face {
+                font-family: myFontName;
+                src: url("myFont.woff");
+            }
+            * { font-family: myFontName, sans-serif; }
+            
+            @font-face {
+                font-family:"Nanum Gothic";
+                src:url("NanumGothic.eot"); /* IE 9 호환성 보기 모드 대응 */
+                src:local("☺"),             /* local font 사용 방지. 생략 가능 */
+                    url("NanumGothic.eot?#iefix") format('embedded-opentype'), /* IE 6~8 */
+                    url("NanumGothic.woff") format('woff'); /* 표준 브라우저 */
+              }
+              
+              * { font-family: "Nanum Gothic", sans-serif; }
+        </div>
+        <!--// code -->
     </div>
 </body>
 </html>
