@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;box-sizing:border-box;}
+a{text-decoration:none;}
+ul,li{list-style:none;}
+
+.txt1{color:pink;transform:rotate(20deg);}
+.txt2{color:blue;transform:rotate(12deg);}
+.txt3{color:purple;transform:scale(1.2);}
+.txt4{color:margenta;transform:rotate(10deg);}
+.txt5{color:pink;transform:rotate(20deg);}

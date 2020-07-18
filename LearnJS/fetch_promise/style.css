@@ -4,6 +4,9 @@
 a{text-decoration:none;}
 ul,li{list-style:none;}
 body{backgrouond:#eee;}
+.searchBox{width:100%;padding:50px 50px 0;overflow:hidden;}
+.searchBox>input[type="text"]{width:300px;height:30px;background:#fff;border:1px solid #bbb;padding-left:10px;}
+.searchBox>.btnSearch{width:80px;height:30px;background:#333;color:#fff;font:bold 12px/30px 'arial';text}
 
 .content{padding:50px;overflow:hidden;opacity:0;transition:1s;}
 .content.on{opacity:1;}
