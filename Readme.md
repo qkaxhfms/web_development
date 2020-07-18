@@ -17,3 +17,7 @@
 - typo graphy
 - vendor prefix
 - white wrap
+
+### 세부 요구사항
+
+- 브라우저 렌더링
