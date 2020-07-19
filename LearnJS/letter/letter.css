@@ -3,6 +3,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 a{text-decoration:none;}
 ul,li{list-style:none;}
+span{display:inline-block;font-size:50px;}
 
 .txt1{color:pink;transform:rotate(20deg);}
 .txt2{color:blue;transform:rotate(12deg);}
