@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure JS FadeOut</title>
+    <style>
+        
+        *{margin:0;padding:0;}
+        body{font:400 12px/1.3rem 'arial';}
+        .wrap{
+            width:150px;
+            margin:150px auto;
+        }
+        .box{
+            width:150px;
+            height:150px;
+            background:orange;
+            text-align: center;
+            font-size:2rem;
+            line-height:150px;
+        }
+        .btnWrap{
+            display: flex;
+            align-items:center;
+            margin:10px 0;
+        }
+        .btnWrap button{
+            flex:1 auto;
+            height:40px;
+            border:1px solid #000;
+            box-sizing:border-box;
+        }
+        .btnWrap .btnClick{
+            background:#000;
+            color:#fff;
+        }
+        .btnWrap .btnReset{
+            background:#ff0;
+            color:#000;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- box -->
+        <div class="box">
+            ex
+        </div>
+        <!--// box -->
+        <!-- btnWrap -->
+        <div class="btnWrap">
+            <button type="button" class="btnClick">클릭</button>
+        </div>
+        <!--// btnWrap -->
+    </div>
+    <script>
+
+        let fOut = () => {
+            setInterval(() => fOutBtn(), 100);
+        }
+
+        let j=0;
+        const fOutBtn = function(){
+            let box = document.querySelector(".box");
+            let spd = j;
+            let opacity = 1;
+            let deSpd = 0.1;
+            if(j<10){
+                j++;
+                opacity = opacity - (deSpd * spd);
+                box.style.opacity = opacity;
+                console.log(j);
+            }else{
+                box.style.opacity = 0;
+                box.style.display = "none";
+                return;
+                console.log(j);
+            }
+        }
+
+        const btnClick = document.querySelector(".btnClick");
+        btnClick.addEventListener("click",fOut);
+
+    </script>
+</body>
+</html>
