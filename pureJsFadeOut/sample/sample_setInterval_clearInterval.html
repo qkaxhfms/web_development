@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure JS FadeOut</title>
+    <style>
+        
+        *{margin:0;padding:0;}
+        body{font:400 12px/1.3rem 'arial';}
+        .wrap{
+            width:150px;
+            margin:150px auto;
+        }
+        .box{
+            width:150px;
+            height:150px;
+            background:orange;
+            text-align: center;
+            font-size:2rem;
+            line-height:150px;
+        }
+        .btnWrap{
+            display: flex;
+            align-items:center;
+            margin:10px 0;
+        }
+        .btnWrap button{
+            flex:1 auto;
+            height:40px;
+            border:1px solid #000;
+            box-sizing:border-box;
+        }
+        .btnWrap .btnClick{
+            background:#000;
+            color:#fff;
+        }
+        .btnWrap .btnReset{
+            background:#ff0;
+            color:#000;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- box -->
+        <div class="box">
+            ex
+        </div>
+        <!--// box -->
+        <!-- btnWrap -->
+        <div class="btnWrap">
+            <button type="button" class="btnClick">클릭</button>
+        </div>
+        <!--// btnWrap -->
+    </div>
+    <script>
+
+    const box = document.querySelector(".box");
+
+    const fadeOut = () => {
+        const fadeOutInterval = setInterval(() => {
+            // if (!box.style.opacity) box.style.opacity = 1;
+            // box.style.opacity > 0 ? box.style.opacity -= 0.01 : clearInterval(fadeOutInterval);
+            if (!box.style.opacity){
+                box.style.opacity = 1;
+            }else{
+                box.style.opacity > 0 ? box.style.opacity -= 0.01 : clearInterval(fadeOutInterval);
+            }
+        }, 10);
+    }
+
+    document.querySelector(".btnClick").addEventListener("click", fadeOut);
+    </script>
+</body>
+</html>
