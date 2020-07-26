@@ -4,22 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /*임시리셋*/
+        /*reset*/
         *{margin:0;padding:0;}
+        body{
+            background:#000;
+            font:400 14px/1.3rem 'Rowdies', cursive;
+        }
         ul,ol,li{list-style:none;}
-        .svg-box{width:150px;background:#ccc;}
+
+        /*wrapper*/
+        .wrapper{
+            text-align:center;
+            width:100vw;
+            height:100vh;
+        }
+        .svg-box{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            width:200px;
+        }
+        .svg-box h1{color:#fff;margin:0 auto 1.4rem;}
         .svg-box svg{}
-        .svg-box svg path{fill:transparent;stroke:#000;stroke-dasharray:2846;stroke-dashoffset:2846;transition:all 5s;}
-        .svg-box:hover svg path{stroke-dashoffset:0;}
+        .svg-box svg path{
+            fill:#fff;
+            stroke:#fff;
+            stroke-width:5px;
+            stroke-dasharray:2846;
+            stroke-dashoffset:2846;
+            transition:all 5s;
+        }
+        .svg-box:hover svg path{
+            stroke-dashoffset:0;
+            fill:transparent;
+            stroke:#00cc00;
+        }
     </style>
 </head>
 <body>
-    <h1>SVG MOTION</h1>
-    <div class="svg-box">
-        <svg viewBox="0 0 576 512">
-            <path fill="currentColor" d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.94-83a10,10,0,1,0-17.27-10h0l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10h0l47.94,83C64.53,202.22,8.24,285.55,0,384H576c-8.24-98.45-64.54-181.78-146.85-226.55"></path>
-        </svg>
+    <div class="wrapper">
+        <div class="svg-box">
+            <h1>SVG MOTION</h1>
+            <svg viewBox="0 0 576 512">
+                <path fill="currentColor" d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.94-83a10,10,0,1,0-17.27-10h0l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10h0l47.94,83C64.53,202.22,8.24,285.55,0,384H576c-8.24-98.45-64.54-181.78-146.85-226.55"></path>
+            </svg>
+        </div>
     </div>
 </body>
 </html>
