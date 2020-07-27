@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Float relase</title>
     <style>
-        .container{background:#333;}
+        *{margin:0;padding:0;}
+        body{}
+        .container{padding:40px 20px;}
+        .container h1{margin-bottom:20px;}
         .container>div{margin:20px 0;}
         /*type1
         - after clearfix
@@ -36,18 +39,21 @@
     </style>
 </head>
 <body>
-    <h1>Float Relase</h1>
     <div class="container">
+        <h1>Float Relase</h1>
+        <h2>After Clearfix</h2>
         <div class="type1">
             <div>1</div>
             <div>2</div>
             <div>3</div>
         </div>
+        <h2>Micro Clearfix</h2>
         <div class="type2">
             <div>1</div>
             <div>2</div>
             <div>3</div>
         </div>
+        <h2>Display flow-root</h2>
         <div class="type3">
             <div>1</div>
             <div>2</div>
