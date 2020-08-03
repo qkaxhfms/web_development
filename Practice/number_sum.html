@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Prompt Confirm</title>
+</head>
+<body>
+    <h1>Practice</h1>
+    <p>들어온 숫자를 각 자릿수를 더하여 출력합니다.</p>
+    <script>
+
+        //숫자를 나눈다
+        //각 자리수를 더한다.
+        var num = 123456;
+        var numS = num.toString();
+        var numArray = [];
+        var numAll;
+        
+        for(i=0; i<numS.length; i++){
+            var numConA = parseInt(numS[i]);
+            numArray.push(numConA);
+            numAll = numArray[i];
+        }
+        
+        console.log(numAll);
+        numAll = numArray[0] + numArray[1] + numArray[2] + numArray[3] + numArray[4] + numArray[5];        
+        console.log(numAll);               
+        
+        var changeNum0 = parseInt(numArray[0]);
+        var changeNum1 = parseInt(numArray[1]);
+        var changeNum2 = parseInt(numArray[2]);
+        var changeNum3 = parseInt(numArray[3]);
+        var changeNum4 = parseInt(numArray[4]);
+        var changeNum5 = parseInt(numArray[5]);
+        
+        var changeNumAll = 
+        changeNum0 + changeNum1 + changeNum2 + changeNum3 + changeNum4 + changeNum5;
+        
+        console.log(changeNumAll);
+        
+        </script>
+</body>
+
+</html>
