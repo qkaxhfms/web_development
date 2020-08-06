@@ -1,14 +1,14 @@
 $(document).ready(function(){
 
     //브라우저 로딩 시
-    rwd();
+    resizeCon();
 
     //브라우저 로딩 시 rwd 호출
     $(window).on('resize',function(){
-        rwd();
+        resizeCon();
     })
 
-    function rwd(){
+    function resizeCon(){
         var wid = $(window).width();
 
         if(wid >=1000){
