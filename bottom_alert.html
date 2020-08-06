@@ -6,31 +6,26 @@
     <title>Document</title>
     <style>
         *{margin:0;padding:0;}
-        .surpriseMsg.scroll{
-            bottom:20px;
-        }
-        .surpriseMsg{
-            transition:0.2s;
-            position: fixed;
-            left:0;
-            right:0;
-            bottom:-140px;
-            padding:0 30px;
-            border:1px solid red;
-        }
-        .surpriseMsg .inner{
-            padding:16px 15px 7px;
-            background:yellow;
-        }
-        .surpriseMsg .date{margin-top:12px;display:inline-block;}
+        .toastMsg.scroll{bottom:20px;}
+        .toastMsg{transition:0.2s;position:fixed;left:0;right:0;bottom:-140px;padding:0 30px;}
+        .toastMsg .inner{padding:16px 15px 7px;background:rgba(0,0,0,0.8);color:#fff;}
+        .toastMsg .date{margin-top:12px;display:inline-block;}
     </style>
 </head>
 <body>
-    <div class="surpriseMsg">
+    <h1>2초 이따가 등장하는 surpriseMsg</h1>
+    <div class="toastMsg">
         <div class="inner">
-            <p class="txt">제목제목제목</p>
+            <p class="txt">제목제목제목<br> 내용내용내용내용</p>
             <span class="date">0000.00.00</span>
         </div>
     </div>
+    <script>        
+        setTimeout (function(){
+            const toastMsg = document.querySelector(".toastMsg");
+            toastMsg.classList.add("scroll");
+            console.log("hello");
+        },2000);
+    </script>
 </body>
 </html>
