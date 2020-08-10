@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        .box{width:240px;height:240px;border:1px solid #000;}
+    </style>
+</head>
+<body>
+    <h1>Mouse</h1>
+
+    <div class="box">
+        <p>
+          Move the mouse around in this box to watch its coordinates change.
+        </p>
+        <p>
+          <code>pageX</code>: <span id="x">n/a</span>
+        </p>
+        <p>
+          <code>pageY</code>: <span id="y">n/a</span>
+        </p>
+      </div>
+    <script>
+
+        let box = document.querySelector(".box");
+        let pageX = document.getElementById("x");
+        let pageY = document.getElementById("y");
+
+        function updateDisplay(event) {
+            pageX.innerText = event.pageX;
+            pageY.innerText = event.pageY;
+        }
+
+        box.addEventListener("mousemove", updateDisplay, false);
+        box.addEventListener("mouseenter", updateDisplay, false);
+        box.addEventListener("mouseleave", updateDisplay, false);
+    </script>
+</body>
+</html>
