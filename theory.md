@@ -34,3 +34,16 @@ script 요소가 </body>바로 앞에 있으면 async 또는 defer 속성은 사
 	safari는 5 버전부터 모두 지원(단, 5버전에서는 async=false 지원 안함)
 	ios safari는 5.1 버전부터 모두 지원
 	android는 3 버전부터 모두 지원
+
+# `Javascript` undefined와 null의 차이
+
+null
+- 값이 없음
+- 의도적으로 값이 없음을 표현하려고할 떄 사용
+- 변수에 null을 할당하면 값이 해제됨
+
+undefined
+- 값이 할당되지 않은 상태
+- 변수 선언 이후 값이 할당되지 않은 경우에 JavaScript 엔진이 초기화한 값
+- 존재하지 않는 객체 프로퍼티에 접근한 경우 반환되는 값
+- undefined 값을 갖는 변수는 할당을 통해 값을 갖게 됨
