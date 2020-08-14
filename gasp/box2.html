@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GASP</title>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <style>
+        *{margin:0;padding:0;}
+        body{font:400 12px/1.4 "arial";}    
+        #wrap{padding:40px 20px;}
+        .box {display: block;width: 50px;height: 50px;position: relative;border-radius: 6px;margin-top: 4px;display: inline-block;line-height: 50px;text-align: center;color: #333;}
+        .orange{background:orange;}
+        .gray{background:gray;}
+        .green{background:green;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>GASP</h1>
+        <h2 class="title">gsap.to() Basic Usage</h2>
+        <div class="box orange"></div>
+        <div class="box gray"></div>
+        <div class="box green"></div>
+    </div>
+    <script>
+        gsap.to(".green", {duration: 3, rotationX: 360});
+        gsap.to(".orange", {duration: 3, rotationY: 360});
+        gsap.to(".gray", {duration: 3, x: 100, y: 100, scale: 2, skewX: 45, rotation: 180});
+    </script>
+</body>
+</html>
