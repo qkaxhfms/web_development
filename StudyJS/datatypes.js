@@ -55,3 +55,35 @@ null 값은 지금까지 소개한 자료형 중 어느 자료형에도 속하�
 null 값은 오로지 null 값만 포함하는 별도의 자료형을 만듭니다.
 */
 let age = null;
+
+// undefined 값
+/*
+undefined 값도 null 값처럼 자신만의 자료형을 형성
+undefined는 '값이 할당되지 않은 상태’를 나타낼 때 사용
+변수는 선언했지만, 값을 할당하지 않았다면 해당 변수에 undefined가 자동으로 할당
+*/
+
+let age;
+console.log(age);
+/*
+하지만 이렇게 undefined를 직접 할당하는 걸 권장하진 않습니다.
+변수가 ‘비어있거나’ ‘알 수 없는’ 상태라는 걸 나타내려면 null을 사용하세요.
+undefined는 값이 할당되지 않은 변수의 초기값을 위해 예약어로 남겨둡시다.
+*/
+
+//typeof 연산자
+/*
+typeof 연산자는 인수의 자료형을 반환합니다.
+자료형에 따라 처리 방식을 다르게 하고 싶거나
+변수의 자료형을 빠르게 알아내고자 할 때 유용합니다.
+*/
+/*
+typeof x 또는 typeof(x) 형태로 사용합니다.
+피 연산자의 자료형을 문자열 형태로 반환합니다.
+null의 typeof 연산은 "object"인데, 이는 언어상 오류입니다. null은 객체가 아닙니다.
+*/
+
+let name = "Ilya";
+console.log( `hello ${1}` ); // hello 1
+console.log( `hello ${"name"}` ); // hello name
+console.log( `hello ${name}` ); // hello Ilya
