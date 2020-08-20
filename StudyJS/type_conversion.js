@@ -27,3 +27,13 @@ console.log(typeof str); // string
 let num = Number(str); // 문자열 "123"이 숫자 123으로 변환됩니다.
 
 console.log(typeof num); // number
+
+Boolean 불린형으로 변환
+숫자 0, 빈 문자열, null, undefined, NaN과 같이 직관적으로도 “비어있다고” 느껴지는 값들은 false가 됩니다.
+그 외의 값은 true로 변환됩니다.
+
+console.log( Boolean(1) ); // 숫자 1(true)
+console.log( Boolean(0) ); // 숫자 0(false)
+
+console.log( Boolean("hello") ); // 문자열(true)
+console.log( Boolean("") ); // 빈 문자열(false)
