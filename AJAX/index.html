@@ -6,7 +6,7 @@
     <title>AJAX</title>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
-        
+
         //ajax
         $.ajax({
             url:"./data/book.json",
@@ -14,13 +14,14 @@
         }).done(function(data){
             console.log(data.channel.item); // 통신이 되었을경우
             var el = "";
-            $(data.channel.item).map(function(idx, val){
+            // $(data.channel.item).each(function(idx,val){
+            $.each(data.channel.item,function(idx,val){
                 console.log(val);
                 el += "<li>";
                     el += "<img src='"+ val.cover_l_url +"' alt ='bookthumb'/>";
                     el += "<p> 작가 :"+ val.author +"</p>";
                 el += "</li>";
-            })
+            });
 
             console.log(el);
             $(".list").append(el);
