@@ -52,3 +52,15 @@ this 값은 런타임에 결정됩니다.
 함수를 복사해 객체 간 전달할 수 있습니다.
 함수를 객체 프로퍼티에 저장해 object.method()같이 ‘메서드’ 형태로 호출하면 this는 object를 참조합니다.
 */
+
+/* this가 없는 화살표함수 */
+
+let user = {
+    firstName: "보라",
+    sayHi() {
+        let arrow = () => alert(this.firstName);
+        arrow();
+    }
+};
+  
+user.sayHi(); // 보라
