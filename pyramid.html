@@ -11,6 +11,7 @@
         body{font:400 12px/1.4 "arial";}
         table{}
         table caption{position:absolute;font-size:1;color:transparent;}
+        #output{color:Red;}
     </style>
 </head>
 <body>
@@ -36,15 +37,24 @@
     <div id="output"></div>
     <script>
 
-        document.querySelector("#output").innerHTML = "HELLO";
+        const outPut = document.querySelector("#output");
+        let arr = [];
+        let star = "*";
+        let end = 10;
 
         // for
-        for(let i=1; i<10; i++){
-            console.log(i);
+        for(let num=1; num<end; num++){
+            let sum = "";
+            sum += num;
+            console.log(sum);
+        };
+        
+        for(let num=1; num<end-1; num++){
+            let sum = end-1;
+            sum -= num;
+            console.log(sum);
         }
-        for(let j=10; j>0; j--){
-            console.log(j)
-        }
+
     </script>
 </body>
 </html>
