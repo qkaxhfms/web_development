@@ -9,51 +9,27 @@
         *{margin:0;padding:0;}
         ul,ol,li{list-style:none;}
         body{font:400 12px/1.4 "arial";}
-        table{}
-        table caption{position:absolute;font-size:1;color:transparent;}
+        
+        /*output*/
         #output{color:Red;}
+
     </style>
 </head>
 <body>
     <h1>피라미드로 별 만들기</h1>
-    <div id="wrap">
-    *<br>
-    **<br>
-    ***<br>
-    ****<br>
-    *****<br>
-    ******<br>
-    *******<br>
-    ********<br>
-    *********<br>
-    ********<br>
-    *******<br>
-    ******<br>
-    *****<br>
-    ***<br>
-    **<br>
-    *
-    </div>
-    <div id="output"></div>
     <script>
 
-        const outPut = document.querySelector("#output");
-        let arr = [];
-        let star = "*";
-        let end = 10;
-
-        // for
-        for(let num=1; num<end; num++){
-            let sum = "";
-            sum += num;
-            console.log(sum);
-        };
-        
-        for(let num=1; num<end-1; num++){
-            let sum = end-1;
-            sum -= num;
-            console.log(sum);
+        let sum = "";
+        let totalRow = 10;
+        let posArr = [];
+        for(let num=1; num<=totalRow; num++){
+            sum += "*";
+            posArr.push(sum);
         }
+
+        posArr.forEach(function(val,idx,arr){
+            document.write("<p>"+posArr[idx]+"</p>");
+        });
 
     </script>
 </body>
