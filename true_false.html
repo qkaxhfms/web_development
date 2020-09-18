@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>true false</h1>
+    <script>
+        //false : 0, -0, "", null, undefined
+        //true : -1,"hello", "false"
+
+        let obj = {
+            name: "elllie",
+        };
+
+        if(obj){
+            console.log(obj.name);
+        }
+
+        obj && console.log(obj.name);
+        /*
+            없는 데이터에 접근하면 프로그램이 죽는다.
+            Object가 없다면,undefined에 접근하면 name에 접근하게 해서는 안된다.
+        */
+    </script>
+</body>
+</html>

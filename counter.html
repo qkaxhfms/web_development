@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>클래스와 콜백함수</h1>
+    <script>
+        class Counter {
+            constructor(runEveryFivetimes){
+                this.counter = 0;
+                this.callback = runEveryFivetimes;
+            }
+
+            increase(){
+                this.counter++;
+                console.log(this.counter);
+                if(this.counter % 5 === 0){
+                    if(this.callback){
+                        this.callback(this.counter);
+                        //type지정을 위해서 callback일때만 실행
+                    }
+                }
+            }
+
+        }
+        function printSomething(num){
+            console.log(`yo! ${num}`);
+        }
+        const coolCounter = new Counter(printSomething);
+
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+
+        /*
+        클래스의 재사용성이 좋아진다.
+        */
+    </script>
+</body>
+</html>
