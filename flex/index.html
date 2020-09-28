@@ -9,17 +9,9 @@
         body{background:#fff;}
         .container{margin:2vw 0;}
 
-        .type1{
-            padding:0 20px;
-            display:flex;
-            flex-wrap:nowrap;
-            flex-direction:row;
-            align-items:center;
-            justify-content:space-between;
-        }
-        .box{
-            padding:20px;
-        }
+        /* type1 */
+        .type1{padding:0 20px;display:flex;flex-wrap:nowrap;flex-direction:row;align-items:center;justify-content:space-between;}
+        .box{padding:20px;}
         .box:nth-child(1){border:1px solid red;}
         .box:nth-child(2){border:1px solid blue;}
         .box:nth-child(3){border:1px solid green;}
@@ -28,21 +20,30 @@
         .box:nth-child(6){border:1px solid black;}
 
         @media (max-width:720px){
-            body{
-                background:#ccc;
-            }
-            .type1{
-                align-items:stretch;
-                flex-direction:column;
-                justify-content:flex-start;
-            }
-            .type1 .box{
-                flex-grow:1;
-            }
+            .type1{align-items:stretch;flex-direction:column;justify-content:flex-start;}
+            .type1 .box{flex-grow:1;}
         }
+
+        .type2{position:relative;padding:0 20px;width:1000px;margin:0 auto;height:500px;}
+        .type2 .box{position:absolute;display:inline-block;width:500px;height:500px;border-radius:100%;}
+        .type2 .box:nth-child(1){background:#111;left:-12.5%;}
+        .type2 .box:nth-child(2){background:#222;left:12.5%;}
+        .type2 .box:nth-child(3){background:#333;right:12.5%;}
+        .type2 .box:nth-child(4){background:#444;right:-12.5%;}
+
+        @media (max-width:1024px){
+            .type2{width:auto;height:130vw;display:flex;flex-direction:column;align-items:center;margin:16.25vw 0;}
+            .type2 .box{width:65vw;height:65vw;}
+            .type2 .box:nth-child(1){left:50%;transform:translateX(-50%);top:-16.25vw;}
+            .type2 .box:nth-child(2){left:50%;transform:translateX(-50%);top:16.25vw;}
+            .type2 .box:nth-child(3){right:50%;transform:translateX(50%);bottom:16.25vw;}
+            .type2 .box:nth-child(4){right:50%;transform:translateX(50%);bottom:-16.25vw;}
+        }
+
     </style>
 </head>
 <body>
+
     <section class="container type1">
         <div class="box">1</div>
         <div class="box">2</div>
@@ -51,10 +52,13 @@
         <div class="box">5</div>
         <div class="box">6</div>
     </section>
+
     <section class="container type2">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
+        <div class="box">4</div>
     </section>
-    </body>
+
+</body>
 </html>
