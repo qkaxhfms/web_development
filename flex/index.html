@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 1</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:#fff;}
+        .container{margin:2vw 0;}
+
+        .type1{
+            padding:0 20px;
+            display:flex;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-between;
+        }
+        .box{
+            padding:20px;
+        }
+        .box:nth-child(1){border:1px solid red;}
+        .box:nth-child(2){border:1px solid blue;}
+        .box:nth-child(3){border:1px solid green;}
+        .box:nth-child(4){border:1px solid purple;}
+        .box:nth-child(5){border:1px solid orange;}
+        .box:nth-child(6){border:1px solid black;}
+
+        @media (max-width:720px){
+            body{
+                background:#ccc;
+            }
+            .type1{
+                align-items:stretch;
+                flex-direction:column;
+                justify-content:flex-start;
+            }
+            .type1 .box{
+                flex-grow:1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container type1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </section>
+    <section class="container type2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </section>
+    </body>
+</html>
