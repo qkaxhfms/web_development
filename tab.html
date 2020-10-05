@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul,ol,li{list-style:none;}
+        .list-tab{display:flex;flex-direction:row;}
+        .list-tab li{margin:0 20px;}
+        .list-tab a{display:inline-block;background:#111;color:#fff;}
+    </style>
+</head>
+<body>
+    <h1>tab</h1>
+    <ul class="list-tab">
+        <li><a href="#javascript">menu</a></li>
+        <li><a href="#javascript">menu</a></li>
+        <li><a href="#javascript">menu</a></li>
+        <li><a href="#javascript">menu</a></li>
+        <li><a href="#javascript">menu</a></li>
+    </ul>
+    <script>
+        const listTab = document.querySelectorAll(".list-tab li");
+        for(var i=0; i<listTab.length; i++){
+
+            listTab[i].addEventListener("click",activeMenu)
+        }
+
+        function activeMenu (){
+            for(var i=0; i<listTab.length; i++){
+                listTab[i].classList.remove("on");
+                this.classList.add("on");
+            }
+        }
+    </script>
+</body>
+</html>
