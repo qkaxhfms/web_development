@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="kop">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Convention</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+    </style>
+</head>
+<body>
+    <h1>Coding convention</h1>
+
+    <div class="case">
+        <h2>camelCase</h2>
+        <p>카멜 케이스</p>
+    </div>
+
+    <div class="case">
+        <h2>PasalCase</h2>
+        <p>파살 케이스</p>
+    </div>
+
+    <div class="case">
+        <h2>snake_case</h2>
+        <p>스네이크 케이스</p>
+    </div>
+
+    <div class="case">
+        <h2>kebab-case</h2>
+        <p>케밥 케이스</p>
+    </div>
+
+    <ul>
+        <li>가독성을 위한 공백</li>
+        <li>함수명은 동사를 사용하여 구분하기 : 알아보게 쓰기</li>
+    </ul>
+    
+    
+
+    <script>
+        var name = 'Robin Kwak'; 
+        var Name = 'Dennis Kwak';
+        var NAME = 'Thomas Kwak';
+        // 다 다른 변수
+        console.log(name);// "Robin Kwak"
+        console.log(Name);// "Dennis Kwak"
+        console.log(NAME);// "Thomas Kwak"
+        
+        // camelCase
+        // PascalCase
+        // snake_case
+        // kebab-case
+
+        // var visible = true (x);
+        // var isVisible = true (o);
+
+        // function
+
+        function name(firstName, lastName) {// (x)
+            return `${firstName} ${lastName}`;
+        }
+
+        function getName(firstName, lastName) {// (o)
+            return `${firstName} ${lastName}`;
+        }
+
+    </script>
+</body>
+</html>
