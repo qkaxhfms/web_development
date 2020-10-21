@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM 방법론</title>
+</head>
+<body>
+    <h1>BEM 방법론</h1>
+    <ul>
+        <li>코드의 재사용성을 높히자</li>
+        <li>쉽게 유지보수 하자</li>
+        <li>확장 가능하게 하자</li>
+        <li>클래스명만으로도 무슨 의미인지 예측 가능하도록 하자</li>
+    </ul>
+    <ol>
+        <li>Block(전체를 감싸고 있는 블록 요소)__element(내부요소)--modifier(기능)</li>
+        <li>클래스명은 구체적이고, 명료하며 HTML안에서 읽기 쉬어야 하고, 클래스 명이 무엇을 나타내는지 분명하게 전달되어야 한다.</li>
+        <li>클래스명은 각 html태그에 오직 클래스명을 하나만 사용해야 한다.</li>
+        <li>클래스만을 활용하여 구조화하는 방법이다.</li>
+        <li>반복되는 클래스를 만들거나 똑같은 스타일을 반복해서는 안된다.</li>
+    </ol>
+    <header class="header">
+        <h1 class="header__title">Helloworld</h1>
+        <a href="#javascript" class="header__logo">Logo</a>
+        <nav class="header__navigation">
+            <ul>
+                <li><a href="#javascript">menu1</a></li>
+                <li><a href="#javascript">menu2</a></li>
+                <li><a href="#javascript">menu3</a></li>
+                <li><a href="#javascript">menu4</a></li>
+                <li><a href="#javascript">menu5</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
