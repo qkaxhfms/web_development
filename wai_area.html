@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WAI-ARIA</title>
+    <style>
+        *{margin:0;padding:0;}
+    </style>
 </head>
 <body>
     <h1>WAI-ARIA</h1>
     <p> WAI는‘Web Accessibility Initiative’의 약자로 W3C에서 웹 접근성을 담당하는 조직, ARIA는 ‘Accessible Rich Internet Applications’의 약자로 리치 인터넷을 위한 W3C 접근성 명세이다</p>
+    <ol>
+        <li>
+            <h2>HTML를 의미있게 작성한다.</h2>
+            <code>
+                <a href="#" role="button">이렇게 말고</a>
+                <button type="button">이렇게 쓰기</button>
+            </code>
+        </li>
+        <li>
+            <h2>탭 목록, 탭, 탭 패널(role="tablist|tab|tabpanel")</h2>
+            <span> 탭은 스타일을 의미하는 것이 아니라 현재 페이지 내용에 색인을 제공하는 구조(tablist, tab, tabpanel)를 의미한다. 사이트 탐색 도구에 해당하는 요소는 nav > h2 + ul 또는 aside > h2 + ul 구조로 마크업 힌다.</span>
+            <code>
+                <!-- O: 앵커 형식 탭 -->
+                <div class="weekly">
+                    <div role="tablist">
+                        <a id="mon-anchor" href="#mon" role="tab" aria-selected="true">월</a>
+                        <a id="tue-anchor" href="#tue" role="tab" aria-selected="false">화</a>
+                    </div>
+                    <div id="mon" tabindex="0" role="tabpanel" aria-labelledby="mon-anchor">
+                        월요일엔 빨간 장미를...
+                    </div>
+                    <div id="tue" tabindex="0" role="tabpanel" aria-labelledby="tue-anchor" hidden>
+                        화요일엔 노란 장미를...
+                    </div>
+                </div>
+
+                <!-- O: 버튼 형식 탭 -->
+                <div class="weekly">
+                    <div role="tablist">
+                        <button type="button" id="mon-anchor" aria-controls="mon" role="tab" aria-selected="true">월</button>
+                        <button type="button" id="tue-anchor" aria-controls="tue" role="tab" aria-selected="false">화</button>
+                    </div>
+                    <div id="mon" tabindex="0" role="tabpanel" aria-labelledby="mon-anchor">
+                        월요일엔 빨간 장미를...
+                    </div>
+                    <div id="tue" tabindex="0" role="tabpanel" aria-labelledby="tue-anchor" hidden>
+                        화요일엔 노란 장미를...
+                    </div>
+                </div>
+
+            </code>
+             
+        </li>
+    </ol>
 </body>
 </html>
