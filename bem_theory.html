@@ -7,6 +7,39 @@
 </head>
 <body>
     <h1>BEM 방법론</h1>
+    <p>Block Element Modifier</p>
+    <ol>
+        <li>
+            <h2>Block</h2>
+            <p>재사용 가능한 기능적으로 독립적인 페이지 컴포넌트</p>
+            <ul>
+                <li>독립적인 컴포넌트 단위</li>
+                <li>header, search 등이 될 수 있다.</li>
+            </ul>    
+        </li>
+        <li>
+            <h2>Element</h2>
+            <p>자신이 속한 블럭 내에서만 의미를 가진다.</p>
+            <ul>
+                <li>블럭을 구성하는 단위</li>
+                <li>search의 input 등이 될 수 있다.</li>
+            </ul>
+        </li>
+        <li>
+            <h2>Modifier</h2>
+            <ul>
+                <li>블럭, 엘리먼트의 속성</li>
+                <li>search의 focused나 button의 disabled 등이 될 수 있다.</li>
+            </ul>
+        </li>
+        <li>
+            <h2>__와 --로 구분한다.</h2>
+            <ul>
+                <li>class만을 사용한다.</li>
+                <li>어떤 목적인가를 중점으로 네이밍한다.</li>
+            </ul>
+        </li>
+    </ol>
     <ul>
         <li>코드의 재사용성을 높히자</li>
         <li>쉽게 유지보수 하자</li>
@@ -20,18 +53,22 @@
         <li>클래스만을 활용하여 구조화하는 방법이다.</li>
         <li>반복되는 클래스를 만들거나 똑같은 스타일을 반복해서는 안된다.</li>
     </ol>
-    <header class="header">
-        <h1 class="header__title">Helloworld</h1>
-        <a href="#javascript" class="header__logo">Logo</a>
-        <nav class="header__navigation">
-            <ul>
-                <li><a href="#javascript">menu1</a></li>
-                <li><a href="#javascript">menu2</a></li>
-                <li><a href="#javascript">menu3</a></li>
-                <li><a href="#javascript">menu4</a></li>
-                <li><a href="#javascript">menu5</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <h2>search를 별도 분리한 경우</h2>
+    <div class="search">
+        <form>
+            <div class="search__inner">
+                <div class="search__title">
+                    <label for="main-search">
+                        <i class="fa fa-search"></i>
+                        <span class="blind">Search</span>
+                    </label>
+                </div>
+                <input type="text" id="main-search" class="search__input "> <!--focus시 .search__input--extend 클래스를 추가합니다-->
+                <input type="submit" class="search__button blind" value="Search">
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>
