@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scroll</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+    <style>
+        /* reset */
+        *{margin:0;padding:0;text-align:center;box-sizing:border-box;}
+
+        .container{width:400px;height:400px;margin:20vw auto;border:1px solid red;line-height:400px;}
+        [class*="txtBox"]{background-color:red;color:#fff;display:block;height:100%;}
+
+        .txtBox1{background-color:#111;}
+        .txtBox2{background-color:#222;}
+        .txtBox3{background-color:#333;}
+        .txtBox4{background-color:#444;}
+        .txtBox5{background-color:#555;}
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- container (s) -->
+    <h1>Infinite Scroll</h1>
+    <div class="container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <span class="txtBox txtBox1">
+                    첫번째
+                </span>
+            </div>
+
+            <div class="swiper-slide">
+                <span class="txtBox txtBox2">
+                    두번째
+                </span>
+            </div>
+
+            <div class="swiper-slide">
+                <span class="txtBox txtBox3">
+                    세번째
+                </span>
+            </div>
+
+            <div class="swiper-slide">
+                <span class="txtBox txtBox4">
+                    네번쨰
+                </span>
+            </div>
+
+            <div class="swiper-slide">
+                <span class="txtBox txtBox5">
+                    다섯번째
+                </span>
+            </div>
+
+            </div>
+
+            <!-- Add Scroll Bar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+    </div>
+    <!-- container (e) -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        spaceBetween: 0,
+        loop: true,
+        snapOnRelease:false,
+        speed:1000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: true,
+        },
+    });
+
+    $(".swiper-container").hover(function() {
+        (this).swiper.autoplay.stop();
+    }, function() {
+        (this).swiper.autoplay.start();
+    });
+
+    </script>
+
+</body>
+</html>
