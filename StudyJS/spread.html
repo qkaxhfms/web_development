@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread 와 reset</title>
+</head>
+<body>
+    <h1>Spread</h1>
+    <p>Es6에서 도입</p>
+    <script>
+
+        // const slime = {
+        //     name:'슬라임',
+        // }
+        // const cuteSlime = {
+        //     name:'슬라임',
+        //     attribute:'cute',
+        // }
+        // const purpleCuteSlime = {
+        //     name:'슬라임',
+        //     attribute:'cute',
+        //     color:'purple',
+        // }
+
+        const slime = {
+            name:'슬라임',
+        }
+        const cuteSlime = {
+            ...slime,
+            attribute:'cute',
+        }
+        const purpleCuteSlime  = {
+            ...cuteSlime,
+            color:'cute',
+        }
+
+        console.log(slime);
+        console.log(cuteSlime);
+        console.log(purpleCuteSlime);
+
+        const animals = ['개','고양이','참새'];
+        const anotherAnimals = [...animals, '비둘기'];
+        const anotherAnimalsSame = [...animals, '비둘기', ...animals];
+
+        console.log(animals);
+        console.log(anotherAnimals);
+        console.log(anotherAnimalsSame);
+    </script>
+</body>
+</html>
