@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불변성</title>
+</head>
+<body>
+    <h1>Immutable: 불변성</h1>
+    <script>
+
+        // const done = true;
+        // const result1 = done === true ? '참':'거짓';
+        // const result2 = done && 'true임';
+        // const result3 = done || '상관없음';
+        
+        // console.log(result1);
+        // console.log(result2);
+        // console.log(result3);
+
+        // push
+        let arr = [1,2,3,4];
+        let result = arr.push(5);
+        console.log(arr);
+        console.log(result);
+
+        // concat
+        let arr1 = [1,2,3,4];
+        let result1 = arr1.concat(5);
+        console.log(arr1);
+        console.log(result1);
+
+        // map
+        const arr2 = [0,1,2,3,4,5,6,7,8,9,10]
+        const newData = arr2.map(function(item,index){
+            // console.log(item);
+            // console.log(index);
+            return(item*index)
+        })
+        console.log(arr2);
+        console.log(newData);
+
+        // filter
+        const arr3 = [0,1,2,3,4,5,6,7,8,9]
+        const newArr = arr3.filter((item) => item >3)
+        console.log(arr3);
+        console.log(newArr);
+        
+    </script>
+</body>
+</html>
