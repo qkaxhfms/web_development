@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글씨 크기 변경</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inner">
+            <h1>FontChanger</h1>
+            <div class="fontContainer">
+                <div class="inner">00</div>
+            </div>
+            <div class="buttonContainer">
+                <button class="buttonSizeM">보통</button>
+                <button class="buttonSizeL">큼</button>
+                <button class="buttonSizeXl">매우큼</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const htmlDefault = document.documentElement;
+        const btnSizeM = document.querySelector('.buttonSizeM');
+        const btnSizeL = document.querySelector('.buttonSizeL');
+        const btnSizeXl = document.querySelector('.buttonSizeXl');
+
+        btnSizeM.addEventListener("click",resizeM)
+        function resizeM(){
+            htmlDefault.style.fontSize = 62.5 + '%';
+        }
+
+        btnSizeL.addEventListener("click",resizeL)
+        function resizeL(){
+            htmlDefault.style.fontSize = 70 + '%';
+        }
+
+        btnSizeXl.addEventListener("click",resizeXl)
+        function resizeXl(){
+            htmlDefault.style.fontSize = 87.5 + '%';
+        }
+
+    </script>
+</body>
+</html>
