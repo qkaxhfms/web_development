@@ -16,32 +16,26 @@
                 <div class="inner">00</div>
             </div>
             <div class="buttonContainer">
-                <button class="buttonSizeM">보통</button>
-                <button class="buttonSizeL">큼</button>
-                <button class="buttonSizeXl">매우큼</button>
+                <button type="button" onClick={resizeFont(`SMALL`)}>S</button>
+                <button type="button" onClick={resizeFont(`MEDIUM`)}>M</button>
+                <button type="button" onClick={resizeFont(`LARGE`)}>L</button>
+                <button type="button" onClick={resizeFont(`XLARGE`)}>XL</button>
             </div>
         </div>
     </div>
     <script>
+        const FONTSIZE = {
+            SMALL:'55%',
+            MEDIUM:'62.5%',
+            LARGE:'70%',
+            XLARGE:'87.5%'
+        }
         const htmlDefault = document.documentElement;
-        const btnSizeM = document.querySelector('.buttonSizeM');
-        const btnSizeL = document.querySelector('.buttonSizeL');
-        const btnSizeXl = document.querySelector('.buttonSizeXl');
 
-        btnSizeM.addEventListener("click",resizeM)
-        function resizeM(){
-            htmlDefault.style.fontSize = 62.5 + '%';
+        const resizeFont = size => {
+            htmlDefault.style.fontSize = FONTSIZE[size]
         }
 
-        btnSizeL.addEventListener("click",resizeL)
-        function resizeL(){
-            htmlDefault.style.fontSize = 70 + '%';
-        }
-
-        btnSizeXl.addEventListener("click",resizeXl)
-        function resizeXl(){
-            htmlDefault.style.fontSize = 87.5 + '%';
-        }
 
     </script>
 </body>
