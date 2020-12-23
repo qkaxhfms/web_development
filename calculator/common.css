@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* 임시 reset */
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+html{font-size:62.5%;}
+table{
+    table-layout:fixed;
+    width:100%;
+    border-collapse:collapse;
+    margin:0;
+    padding:0;
+}
+table caption{
+    display:none;
+}
+table tr{margin:0;padding:0;}
+table th{margin:0;padding:0;}
+table td{margin:0;padding:0;}
+button{
+    background-color:transparent;
+    width:100%;
+    height:4rem;
+    border:1px solid #ccc;
+    background-color:#dcdcdc;
+    font-weight:700;
+    font-size:2rem;
+    margin:0;
+    padding:0;
+    outline:none;
+    cursor:pointer;
+}
+button:hover{
+    background-color:#aaa;
+}
+input[type="number"]{
+    width:100%;
+    height:8rem;
+    margin:0;
+    padding:0;
+    cursor:pointer;
+    font-size:2rem;
+}
+/* calculator */
+.calculator{
+}
+.calculator h1{
+    text-align:center;
+}
+.calculator__inner{
+    border:1px solid #333;
+}
+.calculator__inner .button__orange{
+    background-color:orange;
+    color:#fff;
+}
+.calculator__inner .button__orange:hover{
+    background-color:rgb(255, 179, 64);
+    color:#fff;
+}
+.calculator__inner .result__message{
+    background-color:#222;
+    color:#aaa;
+    font-size:3rem;
+    text-align:right;
+    padding:0 1rem;
+}
