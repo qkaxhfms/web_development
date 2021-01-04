@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <h2>AJAX</h2>
+    <table class="table-list">
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        $.ajax({
+            url:"./data/sample.json",
+            dataType:"json"
+        }).done(function(data){
+            console.log(data.channel.item);
+            var element = "";
+            $.each(data.channel.item,function(index,value){
+                console.log(value);
+                element += "<tr><td>";
+                    element += "<img src='"+ value.cover_l_url +"' alt ='bookthumb'/>";
+                    element += "<p> 작가 :"+ value.author +"</p>";
+                element += "</td></tr>";
+            })
+
+            console.log(element);
+            $(".table-list tbody").append(element);
+        }).fail(function(){
+            console.log("야 통신안됐다!")
+        })
+    </script>
+</body>
+</html>
