@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>listItem</h2>
+
+    <!-- itemAppend -->
+    <div class="itemAppend">
+        <button type="button" class="btnAddAppend">append로 li 추가</button>
+        <!-- listItems -->
+        <ul class="appendListItems">
+            <!-- <li>소제목</li> -->
+        </ul>
+        <!--/ listItems -->
+    </div>
+    <!--/ itemAppend -->
+
+    <!-- itemArray -->
+    <div class="itemArray">
+        <button type="button" class="btnAddArray">배열에 있는 값으로 li 추가</button>
+        <!-- listItems -->
+        <ul class="arrayListItems">
+            <!-- <li>소제목</li> -->
+        </ul>
+        <!--/ listItems -->
+    </div>
+    <!--/ itemArray -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // btnAddAppend
+        $(".btnAddAppend").on("click",function(){
+            $(".appendListItems").append("<li>소제목</li>")
+        })
+
+        var arr1 = ["소제목1","소제목2","소제목3","소제목4","소제목5"];
+        var count = 1;
+        console.log(arr1);
+        $(".btnAddArray").on("click",function(){
+            count++;
+            if(count > 5){
+                count = 1 ;
+            }else{
+                // $(".arrayListItems").append(`<li>` + arr1[count] + `</li>`)
+            }
+                console.log(count);
+        })
+
+    </script>
+</body>
+</html>
