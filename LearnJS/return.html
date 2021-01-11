@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return</title>
+</head>
+<body>
+    <h2>Return</h2>
+    <script>
+        // sum
+        let sum = function (x,y){
+            // x+y
+            return x+y;
+        }
+        // sum2
+        let sum2 = (a,b) => {
+            // a+b
+            return a+b; // <!-- 여기서 끝남
+            // return false;
+            // return;
+            // console.log("duioghfpobcv")
+        }
+
+        console.log(sum(5,10))
+        console.log(sum2(5,10))
+
+        let z = 4;
+
+        if(z >5){
+            console.log("크다 이놈아");
+        }else{
+            console.log("작다");
+        }
+
+        let amuguna = (wow) => {
+            if(wow > 5){
+                return console.log("리턴이 되서 튀어나옴");
+            }
+            console.log("리턴이 안된 경우")
+        }
+
+        amuguna(6); 
+
+
+        // getter setter
+        // exception
+        // 배열에 변수 넣는 법
+
+        let con1 = "aaa";
+        let con2 = "bbb";
+
+        const container = {
+            con1:"가가가",
+            con2:"나나나",
+        }
+
+        console.log(container.con1)
+        console.log(container.con2)
+
+    </script>
+</body>
+</html>
