@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+<body>
+    <h2 class="title">List</h2>
+    <form action = "#" id="form">
+        <input type="text" name="word"/>
+        <button type="submit" class="btnAdd">10까지만 증가하는 버튼</button>
+    </form>
+    <p class="result"></p>
+    <p class="output"></p>
+    <script>
+
+        // constants
+        const btnAdd = document.querySelector(".btnAdd");
+        const resultContainer = document.querySelector(".result");
+
+        // resultAdd
+        let startNum = 1;
+
+        const resultAdd = () => {
+            result();
+            (startNum!== 10) ? startNum++:'';
+        }
+
+        const result = () => {
+            resultContainer.innerHTML = startNum;
+        }
+
+        // btnAdd
+        btnAdd.addEventListener("click",resultAdd);
+
+        // const form = document.querySelector("#form");
+        // const output = document.querySelector(".output");
+
+        // form.onsubmit = function(){
+        //     let search = form.word.value;
+        //     output.textContent = search;
+        //     return false
+        // }
+
+        // document.getElementById("form").onsubmit = function(){
+        //     var search = document.getElementById("form").word.value;
+        //     document.getElementById("output").textContent = search;
+        //     return false
+        // }
+
+
+    </script>
+</body>
+</html>
