@@ -1,63 +1,84 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Return</title>
-</head>
-<body>
-    <h2>Return</h2>
-    <script>
-        // sum
-        let sum = function (x,y){
-            // x+y
-            return x+y;
-        }
-        // sum2
-        let sum2 = (a,b) => {
-            // a+b
-            return a+b; // <!-- 여기서 끝남
-            // return false;
-            // return;
-            // console.log("duioghfpobcv")
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Return</title>
+    </head>
+    <body>
+        <h2>Return</h2>
+        <script>
+            // sum
+            // let sum = function (x, y) {
+            //     // x+y
+            //     return x + y;
+            // };
+            // // sum2
+            // let sum2 = (a, b) => {
+            //     // a+b
+            //     return a + b; // <!-- 여기서 끝남
+            //     // return false;
+            //     // return;
+            //     // console.log("duioghfpobcv")
+            // };
 
-        console.log(sum(5,10))
-        console.log(sum2(5,10))
+            // console.log(sum(5, 10));
+            // console.log(sum2(5, 10));
 
-        let z = 4;
+            // let z = 4;
 
-        if(z >5){
-            console.log("크다 이놈아");
-        }else{
-            console.log("작다");
-        }
+            // if (z > 5) {
+            //     console.log("크다 이놈아");
+            // } else {
+            //     console.log("작다");
+            // }
 
-        let amuguna = (wow) => {
-            if(wow > 5){
-                return console.log("리턴이 되서 튀어나옴");
+            // let amuguna = (wow) => {
+            //     if (wow > 5) {
+            //         return console.log("리턴이 되서 튀어나옴");
+            //     }
+            //     console.log("리턴이 안된 경우");
+            // };
+
+            // amuguna(6);
+
+            // getter setter
+            // exception
+            // 배열에 변수 넣는 법
+
+            // let con1 = "aaa";
+            // let con2 = "bbb";
+
+            // const container = {
+            //     con1: "가가가",
+            //     con2: "나나나",
+            // };
+
+            // console.log(container.con1);
+            // console.log(container.con2);
+
+            // function checkAge(age) {
+            //     if (age >= 18) {
+            //         return true;
+            //     } else {
+            //         return confirm("보호자의 동의를 받으셨나요?");
+            //     }
+            // }
+
+            // let age = prompt("나이를 알려주세요", 18);
+
+            // if (checkAge(age)) {
+            //     alert("접속 허용");
+            // } else {
+            //     alert("접속 차단");
+            // }
+
+            function showMovie(age) {
+                if (!checkAge(age)) {
+                    return;
+                }
+                alert("영화 상영");
             }
-            console.log("리턴이 안된 경우")
-        }
-
-        amuguna(6); 
-
-
-        // getter setter
-        // exception
-        // 배열에 변수 넣는 법
-
-        let con1 = "aaa";
-        let con2 = "bbb";
-
-        const container = {
-            con1:"가가가",
-            con2:"나나나",
-        }
-
-        console.log(container.con1)
-        console.log(container.con2)
-
-    </script>
-</body>
+        </script>
+    </body>
 </html>
