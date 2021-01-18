@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Object Array</title>
+    </head>
+    <body>
+        <h2>Object / Array</h2>
+        <script>
+            let person = {
+                name: ["Bob", "Smith"],
+                age: 32,
+                gender: "male",
+                interests: ["music", "skiing"],
+                // bio: function () {
+                //     alert(
+                //         this.name[0] +
+                //             "" +
+                //             this.name[1] +
+                //             "is" +
+                //             this.age +
+                //             "years old, He likes" +
+                //             this.interests[0] +
+                //             "and" +
+                //             this.interests[1] +
+                //             "."
+                //     );
+                // },
+                // greeting: function () {
+                //     alert("Hi! I/m" + this.name[0] + ".");
+                // },
+            };
+
+            let men = {
+                age: 45,
+                // name: ["Sally", "Anna"],
+                name: {
+                    first: "Sally",
+                    last: "Anna",
+                },
+            };
+            console.log(person.name);
+            console.log(person.name[0]);
+            console.log(person.age);
+            console.log(person.interests[1]);
+            // console.log(person.bio());
+            // console.log(person.greeting());
+
+            console.log(men.age);
+            console.log(men.name.first);
+            console.log(men.name.last);
+            console.log(men["name"]["last"]);
+
+            men["eyes"] = "hazel";
+            men.farewell = function () {
+                console.log("Bye everybody!");
+            };
+            men["eyes"];
+            men.farewell();
+        </script>
+    </body>
+</html>
