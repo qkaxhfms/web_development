@@ -8,56 +8,104 @@
     <body>
         <h2>Object / Array</h2>
         <script>
-            let person = {
-                name: ["Bob", "Smith"],
-                age: 32,
-                gender: "male",
-                interests: ["music", "skiing"],
-                // bio: function () {
-                //     alert(
-                //         this.name[0] +
-                //             "" +
-                //             this.name[1] +
-                //             "is" +
-                //             this.age +
-                //             "years old, He likes" +
-                //             this.interests[0] +
-                //             "and" +
-                //             this.interests[1] +
-                //             "."
-                //     );
-                // },
-                // greeting: function () {
-                //     alert("Hi! I/m" + this.name[0] + ".");
-                // },
-            };
+            // object는 key:value의 집합체이다.
 
-            let men = {
-                age: 45,
-                // name: ["Sally", "Anna"],
-                name: {
-                    first: "Sally",
-                    last: "Anna",
-                },
-            };
-            console.log(person.name);
-            console.log(person.name[0]);
-            console.log(person.age);
-            console.log(person.interests[1]);
-            // console.log(person.bio());
-            // console.log(person.greeting());
+            // 1. Literals and properties
+            const obj1 = {}; //object literal syntax
+            const obj2 = new Object(); //object constructor syntax
 
-            console.log(men.age);
-            console.log(men.name.first);
-            console.log(men.name.last);
-            console.log(men["name"]["last"]);
+            function print(person) {
+                console.log(person.name);
+                console.log(person.age);
+            }
+            const peter = { name: "peter", age: 4 };
+            print(peter);
 
-            men["eyes"] = "hazel";
-            men.farewell = function () {
-                console.log("Bye everybody!");
-            };
-            men["eyes"];
-            men.farewell();
+            peter.hasJob = true;
+            console.log(peter.hasJob);
+
+            delete peter.hasJob;
+            console.log(peter.hasJob);
+
+            // 2. computed properties -> 계산된 프로퍼티
+            console.log(peter.name);
+            console.log(peter["name"]); // key는 string 타입으로 넣기
+
+            const mike = { name: "mike", age: 10 };
+
+            function printValue(obj, key) {
+                console.log(obj[key]);
+            }
+            printValue(mike, "name");
+            printValue(mike, "age");
+
+            // 3. property value shorthand
+            const person1 = { name: "bob", age: 2 };
+            const person2 = { name: "steve", age: 4 };
+            const person3 = { name: "dave", age: 8 };
+            const person4 = makePerson("a", 30);
+            const person5 = new Person("b", 30);
+            console.log(person4);
+            console.log(person5);
+
+            function makePerson(name, age) {
+                return {
+                    name,
+                    age,
+                    // name: name,
+                    // age: age,
+                };
+            }
+
+            // 4. constructor function
+            function Person(name, age) {
+                // this = {};
+                this.name = name;
+                this.age = age;
+                //return this
+            }
+
+            // 5. in operator
+            console.log("name" in peter);
+            console.log("age" in peter);
+            console.log("random" in peter);
+
+            // 6. for...in, for...of
+            // for (key in obj)
+            console.clear();
+            for (key in peter) {
+                console.log(key);
+            }
+            // for (value of iterable)
+            const array = [1, 2, 3, 4, 5];
+            // for (let i = 0; i < array.length; i++) {
+            //     console.log(i);
+            // }
+            for (value of array) {
+                console.log(value);
+            }
+
+            // 7. cloning
+            const user = { name: "peter", age: "20" };
+            const user2 = user;
+            user2.name = "coder";
+            console.log(user);
+
+            // old way
+            const user3 = {};
+            for (key in user) {
+                user3[key] = user[key];
+            }
+            console.log(user3);
+            const user4 = {};
+            Object.assign(user4, user);
+            console.log(user4);
+
+            const fruit1 = { color: "red" };
+            const fruit2 = { color: "blue", size: "big" };
+            const mixed = Object.assign({}, fruit1, fruit2);
+            console.log(mixed.color);
+            console.log(mixed.size);
         </script>
     </body>
 </html>
