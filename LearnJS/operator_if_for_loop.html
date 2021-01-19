@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Operator, if, for, loop</title>
+    </head>
+    <body>
+        <h2>Operator / if / for /loop</h2>
+        <script>
+            // string concatenation
+            console.log("my" + "cat");
+            console.log("1" + 2);
+            console.log(3 + "2");
+            console.log(`
+                string literals:
+                ...
+                1 + 2 =${1 + 2}
+            `);
+
+            // numeric operaors
+            console.log(5 % 2);
+            console.log(2 ** 3);
+
+            // increment and decrement operators
+            let counter = 2;
+            const preIncrement = ++counter;
+            console.log(`preIncrement: ${preIncrement}, counter:${counter}`);
+
+            const postIncrement = counter++;
+            console.log(`postIncrement: ${postIncrement}, counter:${counter}`);
+
+            //assginment operators
+            let x = 3;
+            let y = 6;
+            x += y;
+            console.log((x += y));
+            x -= y;
+            console.log((x -= y));
+            x *= y;
+            console.log((x *= y));
+            x /= y;
+            console.log((x /= y));
+
+            //logical operaotrs; || or && and ! not
+
+            const value1 = false;
+            const value2 = 4 < 2;
+            console.log(`${value1 || value2 || check()}`);
+            console.log(`${value1 && value2 && check()}`);
+
+            function check() {
+                for (let i = 0; i < 10; i++) {
+                    console.log("ㅜㅜ");
+                }
+                return true;
+            }
+
+            //equality
+            const stringFive = "5";
+            const numberFive = 5;
+
+            console.log(stringFive == numberFive);
+            console.log(stringFive != numberFive);
+
+            console.log(stringFive === numberFive);
+            console.log(stringFive !== numberFive);
+
+            //object eqaulity
+            const peter1 = { name: "peter" };
+            const peter2 = { name: "peter" };
+            const peter3 = peter1;
+
+            console.log(peter1 == peter2);
+            console.log(peter1 === peter2);
+            console.log(peter1 === peter3);
+
+            console.clear();
+
+            const name = "peter";
+            if (name === "peter") {
+                console.log("welcome");
+            } else if (name === "coder") {
+                console.log("wow~");
+            } else {
+                console.log("unknown");
+            }
+            // ternary operator
+            console.log(name === "peter" ? "yes" : "no");
+
+            const browser = "IE";
+            switch (browser) {
+                case "IE":
+                    console.log("go away!");
+                    break;
+                case "Chrome":
+                case "Firefox":
+                    console.log("love you!");
+                    break;
+                default:
+                    console.log("same all!");
+                    break;
+            }
+
+            // loops
+            let i = 3;
+            while (i > 0) {
+                console.log(`while:${i}`);
+                i--;
+            }
+
+            do {
+                console.log(`do while:${i}`);
+                i--;
+            } while (i > 0);
+        </script>
+    </body>
+</html>
