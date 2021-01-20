@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function</title>
+    </head>
+    <body>
+        <h2>Function</h2>
+        <script>
+            // Function
+            // function name(param1, param2){body, ... return;}
+            // one function === one thing
+
+            function printHello() {
+                console.log("Hello");
+            }
+            printHello();
+            function log(message) {
+                console.log(message);
+            }
+            log("HELLO");
+            log(1234);
+
+            function changeName(obj) {
+                obj.name = "coder";
+            }
+            const peter = { name: "peter" };
+            changeName(peter);
+            console.log(peter);
+
+            // default parameter
+            function showMessage(message, from = "unknown") {
+                // if (from === undefined) {
+                //     from = "unknown";
+                // }
+                console.log(`${message} by ${from}`);
+            }
+            showMessage("Hi!");
+
+            console.clear();
+
+            // rest parameter
+            function printAll(...args) {
+                // for (let i = 0; i < args.length; i++) {
+                //     console.log(args[i]);
+                // }
+                for (const arg of args) {
+                    console.log(arg);
+                }
+            }
+
+            printAll("dream", "coding", "peter");
+
+            // scope
+            let globalMessage = "global";
+            function printMessage() {
+                let message = "hello";
+                console.log(message);
+                console.log(globalMessage);
+                function printAnother() {
+                    console.log(message);
+                }
+            }
+            printMessage();
+
+            // return a value
+            function sum(a, b) {
+                return a + b;
+            }
+            const result = sum(1, 2);
+            console.log(`sum: ${sum(1, 2)}`);
+
+            // Early return , early exit
+            // bad
+            function upgradeUser(user) {
+                if (user.point > 10) {
+                    //long upgrade logic...
+                }
+            }
+            // good
+            function upgradeUser(user) {
+                if (user.point <= 10) {
+                    return;
+                }
+                //long upgrade logic...
+            }
+        </script>
+    </body>
+</html>
