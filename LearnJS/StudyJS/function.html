@@ -85,6 +85,39 @@
                 }
                 //long upgrade logic...
             }
+
+            // function expression
+            const print = function () {
+                console.log("print");
+            };
+            print();
+            const printAgain = print;
+            printAgain();
+            const sumAgain = sum;
+            console.log(sumAgain(1, 3));
+
+            // anonymous function
+            const printYes = function () {
+                console.log("yes!");
+            };
+            const printNo = function () {
+                console.log("no!");
+            };
+            randomQuiz("wrong", printYes, printNo);
+            randomQuiz("love you", printYes, printNo);
+
+            // callback function
+            function randomQuiz(answer, printYes, printNo) {
+                if (answer === "love you") {
+                    printYes();
+                } else {
+                    printNo();
+                }
+            }
+
+            (function hello() {
+                console.log("IIFE");
+            })();
         </script>
     </body>
 </html>
