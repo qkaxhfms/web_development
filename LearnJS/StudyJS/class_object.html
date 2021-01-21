@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Class Object</title>
+    </head>
+    <body>
+        <h1>Class와 Object</h1>
+        <script>
+            "use strict";
+            // class : template
+            // class
+            class Person {
+                // constructor
+                constructor(name, age) {
+                    //fields
+                    this.name = name;
+                    this.age - age;
+                }
+
+                // method
+                speak() {
+                    console.log(`${this.name}:Hello!`);
+                }
+            }
+            const peter = new Person("peter", 20);
+            console.log(peter.name);
+            console.log(peter.age);
+            peter.speak();
+
+            // getter and setters
+            class User {
+                constructor(firstName, lastName, age) {
+                    this.firstName = firstName;
+                    this.lastName = lastName;
+                    this.age = age;
+                }
+                get age() {
+                    return this._age;
+                }
+                set age(value) {
+                    this._age = value < 0 ? 0 : value;
+                }
+            }
+
+            const user1 = new User("Peter", "Job", -1);
+            console.log(user1.age);
+
+            // Fields(public, private)
+
+            class Experiment {
+                publicField = 2;
+                #privateField = 0;
+            }
+
+            const experiment = new Experiment();
+            console.log(experiment.publicField);
+            console.log(experiment.privateField);
+
+            class Article {
+                static publisher = "Hello Coding";
+                constructor(articleNumber) {
+                    this.articleNumber = articleNumber;
+                }
+                static printPublisher() {
+                    console.log(Article.publicField);
+                }
+            }
+
+            const article1 = new Article(1);
+            const article2 = new Article(2);
+            console.log(Article.publisher);
+            Article.printPublisher();
+        </script>
+    </body>
+</html>
