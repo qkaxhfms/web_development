@@ -3,7 +3,7 @@
 const object = { a: 1, b: 2, c: 3 };
 
 for (const property in object) {
-  console.log(`${property}: ${object[property]}`);
+    console.log(`${property}: ${object[property]}`);
 }
 
 // expected output:
@@ -11,12 +11,12 @@ for (const property in object) {
 // "b: 2"
 // "c: 3"
 
-const example = [1,2,3];
+const example = [1, 2, 3];
 
-for(var i =0; i<example.length; i++){
+for (var i = 0; i < example.length; i++) {
     console.log(i);
 }
 
-for(var i in example){
+for (var i in example) {
     console.log(i);
 }

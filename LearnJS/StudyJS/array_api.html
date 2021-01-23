@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array Api</title>
+    </head>
+    <body>
+        <h1>Array / Api</h1>
+        <script>
+            // Array
+            // array
+            const arr1 = new Array();
+            const arr2 = [1, 2];
+
+            console.log(arr1);
+            console.log(arr2);
+
+            // index position
+            const fruits = ["사과", "바나나"];
+            console.log(fruits);
+            console.log(fruits.length);
+            // console.log(fruits['key']);
+            console.log(fruits[0]);
+            console.log(fruits[1]);
+            console.log(fruits[2]);
+            console.log(fruits[fruits.length - 1]);
+
+            // looping
+            // print all fruits
+
+            console.clear();
+            for (let i = 0; i < fruits.length; i++) {
+                console.log(fruits[i]);
+            }
+
+            // for of
+            for (let fruit of fruits) {
+                console.log(fruit);
+            }
+
+            // forEach
+            fruits.forEach((val, idx, arr) => {
+                console.log(val);
+                console.log(idx);
+                console.log(arr);
+            });
+            fruits.forEach((fruit) => console.log(fruit));
+
+            // add,deletion,copy
+            fruits.push("딸기", "복숭아");
+            console.log(fruits);
+            fruits.pop();
+            fruits.pop();
+            console.log(fruits);
+
+            // unshift : 앞에서 넣기
+            fruits.unshift("수박");
+            console.log(fruits);
+            fruits.shift();
+            fruits.shift();
+            console.log(fruits);
+
+            // pop,push보다 unshift shift가 느리다
+            console.clear();
+            fruits.push("복숭아", "레몬", "딸기", "수박", "딸기");
+            console.log(fruits);
+            // fruits.splice(1, 2);
+            fruits.splice(1, 2, "아보카도", "멜론");
+            console.log(fruits);
+
+            const fruits2 = ["배", "배2"];
+            const newFruits = fruits.concat(fruits2);
+            console.log(fruits2);
+            console.log(newFruits);
+            console.clear();
+
+            console.log(fruits);
+            console.log(fruits.indexOf("사과"));
+            console.log(fruits.indexOf("딸기"));
+            console.log(fruits.includes("사과"));
+            console.log(fruits.includes("딸기"));
+
+            console.clear();
+            fruits.push("참외");
+            console.log(fruits.indexOf("딸기"));
+            console.log(fruits.lastIndexOf("딸기"));
+        </script>
+    </body>
+</html>
