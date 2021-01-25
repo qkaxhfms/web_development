@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Array</h1>
+        <script>
+            {
+                const fruits = ["apple", "banana", "strawberry"];
+                const result = fruits.join("|");
+                console.log(result);
+            }
+
+            {
+                const fruits = "apple,banana,strawberry";
+                const result = fruits.split(",", 2);
+                console.log(result);
+            }
+
+            {
+                const array = [1, 2, 3, 4, 5];
+                const result = array.reverse();
+                console.log(result);
+                console.log(array);
+            }
+
+            {
+                const array = [1, 2, 3, 4, 5];
+                const result = array.slice(0, 2);
+                console.log(result);
+                console.log(array);
+            }
+
+            class Student {
+                constructor(name, age, enrolled, score) {
+                    this.name = name;
+                    this.age = age;
+                    this.enrolled = enrolled;
+                    this.score = score;
+                }
+            }
+            const students = [
+                new Student("A", 29, true, 45),
+                new Student("B", 12, false, 15),
+                new Student("C", 41, false, 95),
+                new Student("D", 66, true, 24),
+                new Student("E", 08, true, 100),
+            ];
+
+            {
+                const result = students.find(function (student) {
+                    return student.score === 95;
+                });
+                console.log(result);
+            }
+
+            {
+                const result = students.filter((student) => student.enrolled);
+                console.log(result);
+            }
+
+            {
+                const result = students.map((student) => student.score);
+                console.log(result);
+            }
+
+            {
+                const result = students.some((student) => students.score < 50);
+                console.log(result);
+
+                const result2 = !students.every(
+                    (student) => students.score < 50
+                );
+                console.log(result2);
+            }
+
+            {
+                const result = students.reduce((prev, curr) => {
+                    console.log("------------");
+                    console.log(prev);
+                    console.log(curr);
+                    return prev + curr.score;
+                }, 0);
+                console.log(result / students.length);
+            }
+            console.clear();
+            {
+                const result = students
+                    .map((student) => student.score)
+                    .filter((score) => score >= 50)
+                    .join();
+                console.log(result);
+            }
+
+            {
+                const result = students
+                    .map((student) => student.score)
+                    .sort((a, b) => b - a)
+                    .join();
+                console.log(result);
+            }
+        </script>
+    </body>
+</html>
