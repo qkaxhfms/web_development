@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CallBack</title>
+    </head>
+    <body>
+        <h1>CallBack</h1>
+        <script>
+            // hoisting, function declaration
+            console.log("1");
+            setTimeout(() => console.log("2"), 1000);
+            console.log("3");
+
+            // synchronos callback
+            function printImmediately(print) {
+                print();
+            }
+            printImmediately(() => console.log("hello"));
+
+            function printWithDelay(print, timeout) {
+                setTimeout(print, timeout);
+            }
+            printWithDelay(() => console.log("async callback"), 2000);
+
+            console.clear();
+            class UserStorage {
+                loginUser(id, password, onSuccess, onError) {
+                    setTimeout(() => {
+                        if (
+                            (id === "peter" && password === "dream") ||
+                            (id === "coder" && password === "academy")
+                        ) {
+                            onSuccess(id);
+                        } else {
+                            onError(new Error("not found"));
+                        }
+                    }, 2000);
+                }
+                getRoles(user, onSuccess, onError) {
+                    setTimeout(() => {
+                        if (user === "peter") {
+                            onSuccess({ name: "peter", role: "admin" });
+                        } else {
+                            onError(new Error("not access"));
+                        }
+                    }, 1000);
+                }
+            }
+
+            const userStorage = new UserStorage();
+            const id = prompt("enter your id");
+            const password = prompt("enter your password");
+            userStorage.loginUser(
+                id,
+                password,
+                (user) => {
+                    userStorage.getRoles(
+                        user,
+                        (userWithRole) => {
+                            alert(
+                                `Hello ${userWithRole.name}, you have a ${userWithRole.role}`
+                            );
+                        },
+                        (error) => {
+                            console.log(error);
+                        }
+                    );
+                },
+                (error) => {
+                    console.log(error);
+                }
+            );
+            // 콜백지옥 예제
+        </script>
+    </body>
+</html>
