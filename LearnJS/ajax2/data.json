@@ -1,0 +1,29 @@
+{
+    "language": [
+        {
+            "name": "HTML",
+            "category": "web",
+            "developer": "W3C"
+        },
+        {
+            "name": "CSS",
+            "category": "web",
+            "developer": "W3C"
+        },
+        {
+            "name": "Java",
+            "category": "application",
+            "developer": "Oracle"
+        },
+        {
+            "name": "Python",
+            "category": "application",
+            "developer": "Python"
+        },
+        {
+            "name": "한글",
+            "category": "언어",
+            "developer": "sejong"
+        }
+    ]
+}
