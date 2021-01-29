@@ -5,65 +5,198 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>List add</title>
         <style>
-            .table-row {
+            html {
+                font-size: 62.5%;
+            }
+            button {
+                margin: 0;
+            }
+
+            /* ttable */
+            .table-row.off {
                 display: none;
             }
             .table-row.on {
-                display: block;
+                /* display: table; */
+            }
+            .table {
+                border-collapse: collapse;
+            }
+            .table tr {
+                width: 100%;
+            }
+            .table th,
+            .table td {
+                border: 1px solid #111;
+            }
+
+            /* btn */
+            .btn {
+                margin: 0;
+                padding: 0 1rem;
+                display: inline-block;
+                width: 100%;
+                height: 40px;
+                background: #fff;
+                border: 1px solid #111;
             }
         </style>
     </head>
     <body>
         <h1>List add</h1>
-        <button type="button" class="btnAdd">더하기</button>
-        <button type="button" class="btnAdd1">dfsdfsd</button>
-        <table>
-            <tr class="table-row off" data-num="1">
-                <td>1</td>
-            </tr>
-            <tr class="table-row off" data-num="2">
-                <td>2</td>
-            </tr>
-            <tr class="table-row off" data-num="3">
-                <td>3</td>
-            </tr>
-            <tr class="table-row off" data-num="4">
-                <td>4</td>
-            </tr>
-            <tr class="table-row off" data-num="5">
-                <td>5</td>
-            </tr>
-            <tr class="table-row off" data-num="6">
-                <td>6</td>
-            </tr>
-            <tr class="table-row off" data-num="7">
-                <td>7</td>
-            </tr>
-            <tr class="table-row off" data-num="8">
-                <td>8</td>
-            </tr>
-            <tr class="table-row off" data-num="9">
-                <td>9</td>
-            </tr>
-            <tr class="table-row off" data-num="10">
-                <td>10</td>
-            </tr>
-        </table>
+        <!-- table-wrapper -->
+        <div class="table-wrapper">
+            <button type="button" class="btn btnAdd btnAdd1">더하기</button>
+            <table class="table">
+                <tr class="table-row off" data-num="1">
+                    <td>
+                        <div>1</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="2">
+                    <td>
+                        <div>2</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="3">
+                    <td>
+                        <div>3</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="4">
+                    <td>
+                        <div>4</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="5">
+                    <td>
+                        <div>5</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="6">
+                    <td>
+                        <div>6</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="7">
+                    <td>
+                        <div>7</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="8">
+                    <td>
+                        <div>8</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="9">
+                    <td>
+                        <div>9</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="10">
+                    <td>
+                        <div>10</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--// table-wrapper -->
+        <!-- table-wrapper -->
+        <div class="table-wrapper">
+            <button type="button" class="btn btnAdd btnAdd2">더하기</button>
+            <table class="table">
+                <button type="button" class="btnAdd1">dfsdfsd</button>
+                <tr class="table-row off" data-num="1">
+                    <td>
+                        <div>1</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="2">
+                    <td>
+                        <div>2</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="3">
+                    <td>
+                        <div>3</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="4">
+                    <td>
+                        <div>4</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="5">
+                    <td>
+                        <div>5</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="6">
+                    <td>
+                        <div>6</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="7">
+                    <td>
+                        <div>7</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="8">
+                    <td>
+                        <div>8</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="9">
+                    <td>
+                        <div>9</div>
+                    </td>
+                </tr>
+                <tr class="table-row off" data-num="10">
+                    <td>
+                        <div>10</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--// table-wrapper -->
         <script
             src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"
         ></script>
         <script>
+            // $(".table-wrapper").each(function (val, idx) {
+            //     console.log(val);
+            //     console.log(idx);
+            //     $(this)
+            //         .children(".btnAdd")
+            //         .on("click", function () {
+            //             console.log($(this));
+            //             // var tableRow = $(".table-row.off").slice(0, 3);
+            //             // var tableRow = $(this)
+            //             //     .siblings(".table-wrapper")
+            //             //     .find(".table-row.off")
+            //             //     .slice(0, 3);
+            //             // console.log(tableRow);
+            //             // tableRow.map(function (idx, val) {
+            //             //     $(val).removeClass("off");
+            //             //     $(val).addClass("on");
+            //             // });
+            //         });
+            // });
             $(".btnAdd").on("click", function () {
-                var tableRow = $(".table-row.off").slice(0, 3);
+                var tableRow = $(this)
+                    .siblings(".table")
+                    .find(".table-row.off")
+                    .css({ display: "none" })
+                    .slice(0, 3);
                 console.log(tableRow);
                 tableRow.map(function (idx, val) {
-                    $(val).removeClass("off");
-                    $(val).addClass("on");
+                    $(val).removeClass("off").css({ display: "none" });
+                    $(val).addClass("on").css({ display: "" });
                 });
             });
-            console.log($(".table-row"));
+            // console.log($(".table-row"));
         </script>
     </body>
 </html>
