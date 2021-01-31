@@ -1,0 +1,44 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+html,
+body {
+    margin: 0;
+}
+.wrapper {
+    padding: 0 2rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper .inner {
+    text-align: center;
+}
+.table-container {
+    width: 100%;
+}
+.table {
+    width: 100%;
+    /* table-layout: fixed; */
+    text-align: center;
+    border-collapse: collapse;
+}
+.table tr {
+}
+.table th,
+.table td {
+    font-size: 1.4rem;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+.typeA .table {
+    /* background-color: #000;
+    color: #fff; */
+}
